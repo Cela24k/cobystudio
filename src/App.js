@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <DrawerAppBar />
-      <LinearProgress variant="determinate" value={progress} style={{transform: "rotate(90deg)"}}/>
+      <LinearProgress variant="determinate" value={progress} style={{top: '64px',left:0, width:'100vw', position:'fixed'}}/>
     </div>
   );
 }
