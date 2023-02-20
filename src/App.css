@@ -1,11 +1,41 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-wrapper{
+  top: 0;
+  left: 0;
+  position: absolute;
 }
+
+.main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.main.a{
+  background-color: #563b67;
+}
+
+.main.b{
+  background-color: #423b67;
+}
+.main.c{
+  background-color: #3b4467;
+  ;
+}
+.main.d{
+  background-color: #3b4d67;
+
+}
+
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+  background-color: black;
+}
+
+/* 
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,19 +43,9 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +55,6 @@
   to {
     transform: rotate(360deg);
   }
-}
+} 
+
+*/
