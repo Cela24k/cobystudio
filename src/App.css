@@ -47,7 +47,8 @@
 .radio-buttons-wrapper{
   display: grid;
   position: fixed;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  padding-right: 2.5vw;
   width: 100vw;
   top: 35%;
 }
