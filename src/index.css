@@ -1,12 +1,19 @@
+* {
+  /* font-family: 'DIN-Regular', sans-serif; */
+  font-family: 'Tilt Warp', cursive;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  /* font-family: 'DIN-Regular', sans-serif; */
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  
+  overflow: overlay;
 }
 
 code {
@@ -28,9 +35,19 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(37, 45, 48);
+  background-color: rgb(0, 0, 0);
   opacity: 50%;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
+}
+
+.MuiAppBar-root{
+  color:black;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.test{
+  font-family: 'DIN-Regular', sans-serif;
 }

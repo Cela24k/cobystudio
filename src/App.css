@@ -16,24 +16,34 @@
 }
 
 .main.a{
-  background-color: #563b67;
+  background-color: #fffff0;
 }
-
 .main.b{
   background-color: #423b67;
 }
 .main.c{
   background-color: #3b4467;
-  ;
 }
 .main.d{
   background-color: #3b4d67;
-
 }
 
-.css-11b3ww9-MuiPaper-root-MuiAppBar-root{
-  background-color: black;
+.appbar-logo-container{
+  font-weight: bolder;
 }
+
+.appbar-logo-divider{
+  margin-left: 10px;
+}
+
+.header-wrapper{
+  position: absolute;
+  top:60vh;
+  width: 100vw;
+  font-size: xx-large;
+  font-weight: 900;
+} 
+
 
 /* 
 

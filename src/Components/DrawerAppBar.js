@@ -21,6 +21,7 @@ const navItems = ['Home', 'Services', 'Contacts', '3D Portfolio'];
 export default function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [moved, setMoved] = React.useState(1);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -49,27 +50,30 @@ export default function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar sx={{bgcolor:"grey"}} component="nav">
+      <AppBar sx={{ bgcolor: "transparent", color: 'black', boxShadow: 0, fontWeight: 'bolder' }} component="nav">
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none'} }}
           >
             <MenuIcon />
           </IconButton>
+          <img src='./pc.png' alt='' width={'30px'} height={'30px'} style={{marginRight: '24px', verticalAlign:'bottom'}}></img>
+            COBYSTUDIO
           <Typography
-            variant="h6"
+            variant="inherit"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            
+            {/*might be text here*/}
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: 'inherit', textTransform: 'none', fontWeight: 'bolder' }}>
                 {item}
               </Button>
             ))}

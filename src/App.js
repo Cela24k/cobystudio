@@ -1,8 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import DrawerAppBar from './Components/DrawerAppBar';
-import { LinearProgress } from '@mui/material';
 import { useState, useEffect } from 'react';
+import { LinearProgress } from '@mui/material';
+
+// TODO: file del logo con il computer; foto dell'avatar; file in gltf; 
 
 function getScrollPercent() {
   var h = document.documentElement,
@@ -24,9 +25,13 @@ function App() {
   return (
     <div className="App">
       <DrawerAppBar />
-      <LinearProgress variant="determinate" value={progress} style={{top: '64px',left:0, width:'100vw', position:'fixed'}}/>
     </div>
   );
 }
+
+// <div className="App">
+//       <DrawerAppBar />
+//       <LinearProgress variant="determinate" value={progress} style={{top: '64px',left:0, width:'100vw', position:'fixed'}}/>
+//   </div>
 
 export default App;
