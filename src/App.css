@@ -38,12 +38,19 @@
 
 .header-wrapper{
   position: absolute;
-  top:60vh;
+  top:70vh;
   width: 100vw;
   font-size: xx-large;
   font-weight: 900;
 } 
 
+.radio-buttons-wrapper{
+  display: grid;
+  position: fixed;
+  justify-content: flex-start;
+  width: 100vw;
+  top: 35%;
+}
 
 /* 
 

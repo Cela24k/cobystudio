@@ -2,6 +2,7 @@ import './App.css';
 import DrawerAppBar from './Components/DrawerAppBar';
 import { useState, useEffect } from 'react';
 import { LinearProgress } from '@mui/material';
+import ColorRadioButtons from './Components/ColorRadiobuttons';
 
 // TODO: file del logo con il computer; foto dell'avatar; file in gltf; 
 
@@ -25,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <DrawerAppBar />
+      <ColorRadioButtons/>
     </div>
   );
 }
