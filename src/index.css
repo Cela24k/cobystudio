@@ -48,6 +48,10 @@ code {
   padding-right: 5vw;
 }
 
+.MuiPaper-root{
+  background-color: '#fffff0' ;
+}
+
 .test{
   font-family: 'DIN-Regular', sans-serif;
 }

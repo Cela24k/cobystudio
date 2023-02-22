@@ -4,7 +4,7 @@
   overflow-x: hidden;
 }
 
-.main-wrapper{
+.main-wrapper {
   top: 0;
   left: 0;
   position: absolute;
@@ -15,42 +15,71 @@
   width: 100vw;
 }
 
-.main.a{
+.main.a {
   background-color: #fffff0;
 }
-.main.b{
+
+.main.b {
   background-color: #423b67;
+  background-image: url(../public/images/profilo_new.jpg);
+  color: white;
+  background-size: cover;
+  background-position: center;
 }
-.main.c{
-  background-color: #3b4467;
+
+.main.c {
+  background-color: #fffff0;
 }
-.main.d{
+
+.main.d {
   background-color: #3b4d67;
 }
 
-.appbar-logo-container{
+.appbar-logo-container {
   font-weight: bolder;
 }
 
-.appbar-logo-divider{
+.appbar-logo-divider {
   margin-left: 10px;
 }
 
-.header-wrapper{
+.header-wrapper {
   position: absolute;
-  top:70vh;
+  top: 70vh;
   width: 100vw;
-  font-size: xx-large;
+  font-size: 1.8em;
   font-weight: 900;
-} 
+}
 
-.radio-buttons-wrapper{
+.radio-buttons-wrapper {
   display: grid;
   position: fixed;
   justify-content: flex-end;
   padding-right: 2.5vw;
   width: 100vw;
   top: 35%;
+}
+
+.avatars-header-wrapper {
+  display: flex;
+  justify-content: start;
+  text-align: left;
+  width: 40vh;
+  margin-left: 2vw;
+}
+
+.avatars-header-wrapper.a {
+  justify-content: start;
+  text-align: left;
+  width: 40vh;
+  margin-left: 2vw;
+}
+
+.avatars-header-wrapper.b {
+  position: absolute;
+  text-align: right;
+  width: 100vh;
+  right: 5vw;
 }
 
 /* 
