@@ -9,10 +9,11 @@ function SceneLogo() {
 
     useEffect(() => {
 
+        /* SETUP */
 
-    /* SETUP */
-
-        const loader = new GLTFLoader();
+        let mixer; // 
+        const clock = new THREE.Clock(); // used to control the animation ticks
+        const loader = new GLTFLoader(); // needed to load the model 
         var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         var renderer = new THREE.WebGLRenderer({
@@ -32,65 +33,78 @@ function SceneLogo() {
 
         window.addEventListener("resize", handleWindowResize);
 
-        camera.position.z = 2;
+        camera.position.x = 0.035;
+        camera.position.y = 0.1;
+        camera.position.z = 0.3;
 
-    /* SETUP */
+        /* SETUP */
 
-    /* LIGHTS */
+        /* LIGHTS */
 
-        const light = new THREE.AmbientLight('white',0.3);
-
-
+        const light = new THREE.AmbientLight('white', 0.3);
         scene.add(light);
 
-    /* LIGHTS */
+        /* LIGHTS */
 
-    /* MODELS */
-
-        var geometry = new THREE.BoxGeometry(1, 1, 1);
-        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        var cube = new THREE.Mesh(geometry, material);
-        // var controls = new OrbitControls( camera, renderer.domElement );
-        // controls.update();
-
-        scene.add(cube);
+        /* MODELS */
 
         loader.load(
             'models/gltf/Coby.glb',
             function (gltf) {
-
-                console.log(gltf)
+                mixer = new THREE.AnimationMixer(gltf.scene);
+                const action = mixer.clipAction(gltf.animations[0]); /* with this variable we can start and stop the animation (and other fun stuff) */
+                action.play();
                 scene.add(gltf.scene);
-
-                // gltf.animations; // Array<THREE.AnimationClip>
-                // gltf.scene; // THREE.Group
-                // gltf.scenes; // Array<THREE.Group>
-                // gltf.cameras; // Array<THREE.Camera>
-                // gltf.asset; // Object
+                action.repetitions = 0; // here you can control how many repetitions of the animation
+                gltf.scene.traverse((child) => {
+                    if (child.isMesh) {
+                        // child.material.map = new THREE.TextureLoader().load('texture.jpg');
+                    }
+                });
+                scene.add(gltf.scene);
             },
             function (xhr) {
-
                 console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-
             },
             function (error) {
                 console.log('An error happened');
             }
         );
 
+        /* MODELS */
+
+        /* CAMERA MOVEMENT BASED ON MOUSE INPUT */
+
+        const mouse = new THREE.Vector2(); // create a vector to store the mouse position
+        document.addEventListener('mousemove', onMouseMove, false);
+
+        function onMouseMove(event) {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = (event.clientY / window.innerHeight) * 2 + 1;
+
+            const rotation = new THREE.Euler(
+                mouse.y * 0.1, // rotate on the x-axis based on the mouse y position
+                mouse.x * 0.1, // rotate on the y-axis based on the mouse x position
+                0, // no rotation on the z-axis
+                'XYZ' // set the order of rotations
+            );
+
+            scene.setRotationFromEuler(rotation); // set the camera rotation
+        }
+        /* CAMERA MOVEMENT BASED ON MOUSE INPUT */
+
+        /* ANIMATION */
+
         var animate = function () {
             requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
             renderer.render(scene, camera);
-
-            // controls.update();
-            // console.log(camera.position);
+            if (mixer) mixer.update(clock.getDelta());
+            // console.log(camera.rotation);
         };
 
-    /* MODELS */
-
         animate();
+        
+        /* ANIMATION */
 
         return () => mountRef.current.removeChild(renderer.domElement);
     }, []);
