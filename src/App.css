@@ -16,7 +16,7 @@
 }
 
 .main.a {
-  background-color: #fffff0;
+  background-color: #fdfde6;
 }
 
 .main.b {
@@ -28,7 +28,7 @@
 }
 
 .main.c {
-  background-color: #fffff0;
+  background-color: #fdfde6;
 }
 
 .main.d {
@@ -64,7 +64,7 @@
   position: fixed;
   justify-content: flex-end;
   padding-right: 2.5vw;
-  width: 100vw;
+  right:0;
   top: 35%;
 }
 
@@ -74,6 +74,8 @@
   text-align: left;
   width: 40vh;
   margin-left: 2vw;
+  /* font-family: 'Poppins', sans-serif; */
+
 }
 
 .avatars-header-wrapper.a {
@@ -88,6 +90,15 @@
   text-align: right;
   width: 100vh;
   right: 5vw;
+}
+
+
+.my-header{
+  font-family: 'Poppins', sans-serif;
+}
+
+.my-span{
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 /* 
