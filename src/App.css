@@ -49,6 +49,14 @@
   width: 100vw;
   font-size: 1.8em;
   font-weight: 900;
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  align-items: end;
+}
+
+.header-container{
+  margin-bottom: 2vw;
 }
 
 .radio-buttons-wrapper {

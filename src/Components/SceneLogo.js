@@ -33,10 +33,11 @@ function SceneLogo() {
 
         window.addEventListener("resize", handleWindowResize);
 
-        camera.position.x = 0.035;
-        camera.position.y = 0.1;
-        camera.position.z = 0.3;
-
+        camera.position.x = 0;
+        camera.position.y = 0.05;
+        camera.position.z = 0.2;
+        camera.lookAt(new THREE.Vector3(0, 0, 0))
+        // camera.rotation.x += 0.8;
         /* SETUP */
 
         /* LIGHTS */
@@ -46,6 +47,13 @@ function SceneLogo() {
 
         /* LIGHTS */
 
+        /* AXES HELPERS */
+
+        // const axesHelper = new THREE.AxesHelper(5);
+        // scene.add(axesHelper);
+
+        /* AXES HELPERS */
+
         /* MODELS */
 
         loader.load(
@@ -54,14 +62,11 @@ function SceneLogo() {
                 mixer = new THREE.AnimationMixer(gltf.scene);
                 const action = mixer.clipAction(gltf.animations[0]); /* with this variable we can start and stop the animation (and other fun stuff) */
                 action.play();
+                gltf.scene.children[0].position.y = -0.12 // scelti arbitrariamente per farla fittare all'origine 0,0,0
+                gltf.scene.children[0].position.x = -0.035 // same
+
                 scene.add(gltf.scene);
                 action.repetitions = 0; // here you can control how many repetitions of the animation
-                gltf.scene.traverse((child) => {
-                    if (child.isMesh) {
-                        // child.material.map = new THREE.TextureLoader().load('texture.jpg');
-                    }
-                });
-                scene.add(gltf.scene);
             },
             function (xhr) {
                 console.log((xhr.loaded / xhr.total * 100) + '% loaded');
@@ -83,7 +88,7 @@ function SceneLogo() {
             mouse.y = (event.clientY / window.innerHeight) * 2 + 1;
 
             const rotation = new THREE.Euler(
-                mouse.y * 0.1, // rotate on the x-axis based on the mouse y position
+                mouse.y * -0.1, // rotate on the x-axis based on the mouse y position
                 mouse.x * 0.1, // rotate on the y-axis based on the mouse x position
                 0, // no rotation on the z-axis
                 'XYZ' // set the order of rotations
@@ -99,11 +104,11 @@ function SceneLogo() {
             requestAnimationFrame(animate);
             renderer.render(scene, camera);
             if (mixer) mixer.update(clock.getDelta());
-            // console.log(camera.rotation);
+            // console.log(camera.position);
         };
 
         animate();
-        
+
         /* ANIMATION */
 
         return () => mountRef.current.removeChild(renderer.domElement);

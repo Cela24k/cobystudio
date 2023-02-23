@@ -6,8 +6,10 @@ function Main() {
       <div className="main a" >
         <SceneLogo />
         <div className="header-wrapper">
-          <h1 style={{ margin: 0 }}>3D Provider</h1>
-          <h2 style={{ fontWeight: 100, margin: 0 }}>Bringing your ideas to life</h2>
+          <div className="header-container">
+            <h1 style={{ margin: 0 }}>3D Provider</h1>
+            <h2 style={{ fontWeight: 100, margin: 0 }}>Bringing your ideas to life</h2>
+          </div>
         </div>
       </div>
       <div className="main b">
