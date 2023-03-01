@@ -82,6 +82,7 @@ function SceneLogo() {
 
         const mouse = new THREE.Vector2(); // create a vector to store the mouse position
         document.addEventListener('mousemove', onMouseMove, false);
+        // document.addEventListener('')
 
         function onMouseMove(event) {
             mouse.x = (event.clientX / window.innerWidth) * 2 - 1;

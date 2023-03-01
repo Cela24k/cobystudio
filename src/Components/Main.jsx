@@ -1,5 +1,7 @@
 import SceneLogo from "./SceneLogo";
 import ReactPlayer from "react-player";
+import SceneProduct from "./SceneProduct";
+import ProductTabs from "./ProductTabs";
 
 function Page1() {
   return (
@@ -17,11 +19,15 @@ function Page1() {
 
 const evaVideo = (
   <ReactPlayer
-    url=  './bfv41-rrqd8.webm'
+    url='./bfv41-rrqd8.webm'
     playing={true}
     loop={true}
     muted={true}
-    // style={{backgroundColor: 'transparent'}} 
+    height={'70vh'}
+    style={{
+      right: 'calc(-130px + 2vw)',
+      position: 'absolute',
+    }}
   />
 )
 
@@ -49,10 +55,12 @@ function Page2() {
   )
 }
 
+// COMPONENTE PAGINA PRODOTTI 
+
 function Page3() {
   return (<div className="main c" id="3">
     <div className="avatars-header-wrapper b">
-      <div>
+      <div className="presentation-wrapper">
         <h2 className="my-header">
           PRODUCT PRESENTATION
         </h2>
@@ -70,6 +78,14 @@ function Page3() {
         <u >
           Click to switch avatars
         </u>
+      </div>
+    </div>
+    <div className="product-scene-wrapper">
+      <SceneProduct/>
+    </div>
+    <div className="product-container">
+      <div className="product-list">
+        <ProductTabs/>
       </div>
     </div>
   </div>
