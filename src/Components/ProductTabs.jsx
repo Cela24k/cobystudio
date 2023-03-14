@@ -12,7 +12,7 @@ export default function ProductTabs() {
   };
 
   return (
-    <Box sx={{ maxWidth: { xs: 320, sm: 480 }, bgcolor: 'background.paper'}}>
+    <Box sx={{ maxWidth: { xs: 320, sm: 480 }, bgcolor: 'transparent'}}>
       <Tabs
         value={value}
         onChange={handleChange}
@@ -25,10 +25,6 @@ export default function ProductTabs() {
         <Tab icon={<Avatar alt="test avatar" src="/Bomber.webp"/>} />
         <Tab icon={<Avatar alt="test avatar" src="/logo512.png"/>} />
         <Tab icon={<Avatar alt="test avatar" src="/pc.png"/>} />
-        <Tab label="Item Four" />
-        <Tab label="Item Five" />
-        <Tab label="Item Six" />
-        <Tab label="Item Seven" />
       </Tabs>
     </Box>
   );

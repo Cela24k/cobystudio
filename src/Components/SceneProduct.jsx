@@ -7,16 +7,17 @@ function SceneProduct() {
     return (
         <div>
             <ReactPlayer
-                url='./Bomber.webm'
+                url='./bfv41-rrqd8.webm'
                 playing={true}
                 loop={true}
                 muted={true}
                 height={'70vh'}
                 style={{
-                    right: 'calc(-130px + 2vw)',
+                    left: 'calc(-130px + 2vw)',
                     position: 'absolute',
                 }}
             />
+            
         </div>
     );
 }
