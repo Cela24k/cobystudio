@@ -32,7 +32,11 @@
 }
 
 .main.d {
-  background-color: #3b4d67;
+  background-color: rgb(43, 43, 43);
+}
+
+.main.e {
+  background-color: #fdfde6;
 }
 
 .appbar-logo-container {

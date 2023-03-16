@@ -19,7 +19,21 @@ function Page1() {
 
 const evaVideo = (
   <ReactPlayer
-    url='./bfv41-rrqd8.webm'
+    url='./video/Walk-EVA.webm'
+    playing={true}
+    loop={true}
+    muted={true}
+    height={'70vh'}
+    style={{
+      right: 'calc(-130px + 2vw)',
+      position: 'absolute',
+    }}
+  />
+)
+
+const feedVideo = (
+  <ReactPlayer
+    url='./video/Voglia_Di_Feed.webm'
     playing={true}
     loop={true}
     muted={true}
@@ -81,14 +95,30 @@ function Page3() {
       </div>
     </div>
     <div className="product-scene-wrapper">
-      <SceneProduct/>
+      <SceneProduct />
     </div>
     <div className="product-container">
       <div className="product-list">
-        <ProductTabs/>
+        <ProductTabs />
       </div>
     </div>
   </div>
+  )
+}
+
+function Page4() {
+  return (
+    <div className="main d" id="4">
+      {feedVideo}
+    </div>
+  )
+}
+
+function Page5() {
+  return (
+    <div className="main e" id="5">
+        
+    </div>
   )
 }
 
@@ -98,9 +128,8 @@ function Main() {
       <Page1 />
       <Page2 />
       <Page3 />
-      <div className="main d" id="4">
-
-      </div>
+      <Page4 />
+      <Page5 />
     </div>
   );
 }

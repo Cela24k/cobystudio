@@ -43,13 +43,14 @@ function SceneProduct() {
         
         /* LIGHTS */
 
-        const light = new THREE.AmbientLight('white', 1);
-        const direct_light = new THREE.DirectionalLight('white', 0.3);
+        const light = new THREE.AmbientLight('white', 0.3);
+        const direct_light = new THREE.DirectionalLight('white', 2.4);
         direct_light.position.x = 0;
         direct_light.position.y = -0.05;
         direct_light.position.z = 1;
+        camera.add(direct_light);
 
-        scene.add(light);
+        scene.add(camera,light);
 
         /* LIGHTS */
         
