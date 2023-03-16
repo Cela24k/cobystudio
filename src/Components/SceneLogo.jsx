@@ -74,32 +74,6 @@ function SceneLogo() {
                 gltf.scene.children[0].position.y = -0.12 // scelti arbitrariamente per farla fittare all'origine 
                 gltf.scene.children[0].position.x = -0.035 // same
 
-                // gltf.scene.traverse(function (node) {
-                //     if (node instanceof THREE.Mesh) {
-                //         console.log('dentro');
-                //         // Check if the material for this mesh has a texture
-                //         if (node.material.map) {
-                //             // Load the texture for this material
-                //             textureLoader.load(
-                //                 'models/gltf/Coby.glb',
-                //                 function (texture) {
-                //                     // Apply the texture to the material
-                //                     node.material.map = texture;
-                //                     node.material.needsUpdate = true;
-                //                 },
-                //                 function (xhr) {
-                //                     console.log((xhr.loaded / xhr.total * 100) + '% loadedd');
-                //                 },
-                //                 function (error) {
-                //                     console.log('An error happened while loading the texture: ', error);
-                //                 }
-                //             );
-                //         }
-                //     }
-                //     else console.log('idk')
-                //     console.log('first')
-                // });
-
                 direct_light.target = gltf.scene.children[0];
                 scene.add(gltf.scene);
                 action.repetitions = 0; // here you can control how many repetitions of the animation

@@ -107,10 +107,14 @@
   position: relative;
 }
 
+.product-container{
+  bottom: 10vh;
+  position: relative;
+}
+
 .product-list{
   width: 100vw;
   height: 10vh;
-  position: relative;
   top:90vh;  
 }
 
