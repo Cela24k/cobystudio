@@ -2,6 +2,7 @@ import SceneLogo from "./SceneLogo";
 import ReactPlayer from "react-player";
 import SceneProduct from "./SceneProduct";
 import ProductTabs from "./ProductTabs";
+import { TextField } from "@mui/material";
 
 function Page1() {
   return (
@@ -121,7 +122,7 @@ function Page4() {
             Let us help you take your projects to the next level with our visually striking and unique 3D art.
             Contact us today to learn more about how we can help you create something truly special.
           </span>
-          
+
         </div>
       </div>
     </div>
@@ -131,7 +132,28 @@ function Page4() {
 function Page5() {
   return (
     <div className="main e" id="5">
+      <div className="contact-wrapper" >
+        <div className="contact-row">
+          <h1>Contact us</h1>
+        </div>
 
+        <div className="contact-row">
+          <TextField fullWidth id="standard-basic" label="Name" variant="standard" />
+          <div className="form-divider"></div>
+          <TextField fullWidth id="standard-basic" label="Surname" variant="standard" />
+        </div>
+
+        <div className="contact-row">
+          <TextField fullWidth id="standard-basic" label="Email *" variant="standard" />
+          <div className="form-divider"></div>
+          <TextField fullWidth id="standard-basic" label="Phone" variant="standard" />
+        </div>
+
+        <div className="contact-row">
+          <TextField multiline rows={2} fullWidth id="standard-basic" label="Message" variant="standard" />
+        </div>
+
+      </div>
     </div>
   )
 }

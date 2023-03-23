@@ -72,7 +72,7 @@ function SceneProduct() {
         controls.enableZoom = false;
 
         loader.load(
-            'models/gltf/Bomber.glb',
+            'models/gltf/Cafe.glb',
             function (gltf) {
                 mixer = new THREE.AnimationMixer(gltf.scene);
                 const action = mixer.clipAction(gltf.animations[0]); /* with this variable we can start and stop the animation (and other fun stuff) */

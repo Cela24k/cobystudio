@@ -23,8 +23,8 @@ export default function ProductTabs() {
         sx={{height:'10vh',bgcolor:'transparent' }}
       >
         <Tab icon={<Avatar alt="test avatar" src="/Bomber.webp"/>} />
-        <Tab icon={<Avatar alt="test avatar" src="/logo512.png"/>} />
-        <Tab icon={<Avatar alt="test avatar" src="/pc.png"/>} />
+        <Tab icon={<Avatar alt="test avatar" src="/Cafe.webp"/>} />
+        <Tab icon={<Avatar alt="test avatar" src="/Cuffie.webp"/>} />
       </Tabs>
     </Box>
   );

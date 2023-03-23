@@ -37,6 +37,8 @@
 
 .main.e {
   background-color: #fdfde6;
+  display: flex;
+  justify-content: center;
 }
 
 .appbar-logo-container {
@@ -132,6 +134,29 @@
 .product-scene-wrapper{
 }
 
+
+.contact-wrapper{
+  padding-top:10vh;
+  width: 50vw;
+  height: 100vh;
+  min-width: 300px;
+}
+
+.contact-row{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-divider{
+  width: 5vw;
+  height: 100%;
+}
 /* 
 
 @media (prefers-reduced-motion: no-preference) {
