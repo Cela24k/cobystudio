@@ -19,11 +19,11 @@ function Page1() {
 
 const evaVideo = (
   <ReactPlayer
-    url='./video/Walk-EVA.webm'
+    url='./video/eva.webm'
     playing={true}
     loop={true}
     muted={true}
-    height={'70vh'}
+    // height={'70vh'}
     style={{
       right: 'calc(-130px + 2vw)',
       position: 'absolute',
@@ -37,9 +37,9 @@ const feedVideo = (
     playing={true}
     loop={true}
     muted={true}
-    height={'70vh'}
+    height={'100vh'}
     style={{
-      right: 'calc(-130px + 2vw)',
+      right: 'calc(2vw)',
       position: 'absolute',
     }}
   />
@@ -62,9 +62,9 @@ function Page2() {
           <u >
             Click to switch avatars
           </u>
-          {evaVideo}
         </div>
       </div>
+      {evaVideo}
     </div>
   )
 }
@@ -88,10 +88,6 @@ function Page3() {
           products will be presented in the best possible way, making a lasting
           impression on your audience.
         </span>
-        <br />
-        <u >
-          Click to switch avatars
-        </u>
       </div>
     </div>
     <div className="product-scene-wrapper">
@@ -110,6 +106,24 @@ function Page4() {
   return (
     <div className="main d" id="4">
       {feedVideo}
+      <div className="avatars-header-wrapper c">
+        <div>
+          <h2 className="my-header" >
+            VISUAL ART
+          </h2>
+          <span className="my-span">
+
+            We offer a wide range of visual art services, creating stunning effects
+            that are guaranteed to captivate your audience.
+            From mesmerizing concert visuals to one of a kind art prints, we have the expertise to bring your vision to life.
+            Our 3D art is not only about appearance but also interactive, which makes it a great choice for art toys
+            or unique 3D prints for artists.
+            Let us help you take your projects to the next level with our visually striking and unique 3D art.
+            Contact us today to learn more about how we can help you create something truly special.
+          </span>
+          
+        </div>
+      </div>
     </div>
   )
 }
@@ -117,7 +131,7 @@ function Page4() {
 function Page5() {
   return (
     <div className="main e" id="5">
-        
+
     </div>
   )
 }

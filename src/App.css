@@ -32,7 +32,7 @@
 }
 
 .main.d {
-  background-color: rgb(43, 43, 43);
+  background-color: rgb(0, 0, 0);
 }
 
 .main.e {
@@ -94,6 +94,13 @@
   right: 5vw; 
 }
 
+.avatars-header-wrapper.c {
+  position: absolute;
+  color: white;
+  max-width: 800px;
+    /* text-align: right;
+    right: 5vw;  */
+}
 
 .my-header{
   font-family: 'Poppins', sans-serif;
