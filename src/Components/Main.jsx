@@ -3,6 +3,7 @@ import ReactPlayer from "react-player";
 import SceneProduct from "./SceneProduct";
 import ProductTabs from "./ProductTabs";
 import { TextField } from "@mui/material";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 function Page1() {
   return (
@@ -12,6 +13,7 @@ function Page1() {
         <div className="header-container">
           <h1 style={{ margin: 0 }}>3D Provider</h1>
           <h2 style={{ fontWeight: 100, margin: 0 }}>Bringing your ideas to life</h2>
+          <KeyboardArrowDownIcon />
         </div>
       </div>
     </div>
@@ -153,8 +155,29 @@ function Page5() {
           <TextField multiline rows={2} fullWidth id="standard-basic" label="Message" variant="standard" />
         </div>
 
+        <div className="send-row">
+
+        </div>
+
       </div>
     </div>
+  )
+}
+
+function Page6() {
+  return (
+      <ReactPlayer className="main f"
+        url='./video/REEL.mp4'
+        playing={true}
+        loop={true}
+        muted={true}
+        controls={true}
+        height={'100%'}
+        width={'100%'}
+        style={{
+          backgroundColor:"#fdfde6"
+        }}
+      />
   )
 }
 
@@ -162,6 +185,7 @@ function Main() {
   return (
     <div className="main-wrapper">
       <Page1 />
+      <Page6 />
       <Page2 />
       <Page3 />
       <Page4 />

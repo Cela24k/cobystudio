@@ -41,6 +41,10 @@
   justify-content: center;
 }
 
+.main.f {
+  background-color: black;
+}
+
 .appbar-logo-container {
   font-weight: bolder;
 }
@@ -50,18 +54,16 @@
 }
 
 .header-wrapper {
-  position: absolute;
-  top: 70vh;
   width: 100vw;
+  height: 100%;
   font-size: 1.8em;
   font-weight: 900;
   display: flex;
   justify-content: center;
-  height: 30vh;
   align-items: end;
 }
 
-.header-container{
+.header-container {
   margin-bottom: 2vw;
 }
 
@@ -70,7 +72,7 @@
   position: fixed;
   justify-content: flex-end;
   padding-right: 2.5vw;
-  right:0;
+  right: 0;
   top: 35%;
 }
 
@@ -93,70 +95,70 @@
 .avatars-header-wrapper.b {
   position: absolute;
   text-align: right;
-  right: 5vw; 
+  right: 5vw;
 }
 
 .avatars-header-wrapper.c {
   position: absolute;
   color: white;
   max-width: 800px;
-    /* text-align: right;
+  /* text-align: right;
     right: 5vw;  */
 }
 
-.my-header{
+.my-header {
   font-family: 'Poppins', sans-serif;
   margin-top: 8vh;
 }
 
-.my-span{
+.my-span {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-.presentation-wrapper{
+.presentation-wrapper {
   max-width: 70vh;
   margin-left: 5vw;
   right: 2vh;
   position: relative;
 }
 
-.product-container{
+.product-container {
   bottom: 10vh;
   position: relative;
 }
 
-.product-list{
+.product-list {
   width: 100vw;
   height: 10vh;
-  top:90vh;  
+  top: 90vh;
 }
 
-.product-scene-wrapper{
-}
+.product-scene-wrapper {}
 
 
-.contact-wrapper{
-  padding-top:10vh;
+.contact-wrapper {
+  padding-top: 10vh;
   width: 50vw;
   height: 100vh;
   min-width: 300px;
 }
 
-.contact-row{
+.contact-row {
   display: flex;
   justify-content: space-between;
 }
 
-.form-wrapper{
+.form-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.form-divider{
-  width: 5vw;
+.form-divider {
+  width: 2.5vw;
   height: 100%;
 }
+
 /* 
 
 @media (prefers-reduced-motion: no-preference) {

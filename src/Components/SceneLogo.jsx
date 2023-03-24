@@ -18,7 +18,7 @@ function SceneLogo() {
         const loader = new GLTFLoader(); // needed to load the model 
 
         var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight , 0.1, 1000);
         var renderer = new THREE.WebGLRenderer({
             antialias: true,
             alpha: true
@@ -39,7 +39,7 @@ function SceneLogo() {
         camera.position.x = 0;
         camera.position.y = 0.05;
         camera.position.z = 0.2;
-        camera.lookAt(new THREE.Vector3(0, 0, 0))
+        // camera.lookAt(new THREE.Vector3(0, 0, 0))
         // camera.rotation.x += 0.8;
         /* SETUP */
 
@@ -128,7 +128,7 @@ function SceneLogo() {
     }, []);
 
     return (
-        <div ref={mountRef}>
+        <div ref={mountRef} style={{position:'absolute', top:'-30vh'}}>
 
         </div>
     );

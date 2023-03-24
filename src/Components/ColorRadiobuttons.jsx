@@ -32,6 +32,7 @@ export default function ColorRadioButtons() {
 
     <div className='radio-buttons-wrapper' style={{ opacity: 0.5 }}>
       <Radio {...controlProps('a')} />
+      <Radio {...controlProps('f')} />
       <Radio {...controlProps('b')} color="secondary" />
       <Radio {...controlProps('c')} color="success" />
       <Radio {...controlProps('d')} color="default" />
