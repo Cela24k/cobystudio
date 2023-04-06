@@ -41,11 +41,13 @@ const feedVideo = (
     loop={true}
     muted={true}
     height={'100vh'}
+    width={'auto'}
     style={{
-      right: 'calc(2vw)',
+      right: '0',
       position: 'absolute',
     }}
   />
+  
 )
 
 function Page2() {

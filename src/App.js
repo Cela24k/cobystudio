@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import DrawerAppBar from './Components/DrawerAppBar';
 import { useState, useEffect } from 'react';
 import { LinearProgress } from '@mui/material';
