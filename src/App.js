@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react';
 import { LinearProgress } from '@mui/material';
 import ColorRadioButtons from './Components/ColorRadiobuttons';
 
-// TODO: file del logo con il computer; foto dell'avatar; file in gltf; 
-
 function getScrollPercent() {
   var h = document.documentElement,
     b = document.body,
@@ -26,14 +24,10 @@ function App() {
   return (
     <div className="App">
       <DrawerAppBar />
-      <ColorRadioButtons/>
     </div>
   );
 }
 
-// <div className="App">
-//       <DrawerAppBar />
-//       <LinearProgress variant="determinate" value={progress} style={{top: '64px',left:0, width:'100vw', position:'fixed'}}/>
-//   </div>
+// <ColorRadioButtons/>
 
 export default App;

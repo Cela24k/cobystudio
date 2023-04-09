@@ -138,7 +138,7 @@ function SceneLogo() {
     }, []);
 
     return (
-        <div ref={mountRef} style={{position:'absolute', top:'-30vh'}}>
+        <div ref={mountRef} style={{position:'absolute', top:'-25vh'}}>
 
         </div>
     );

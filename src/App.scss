@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   background-color: #282c34;
-  overflow-x: hidden;
 
   .appbar-logo-container {
     font-weight: bolder;
@@ -17,17 +16,19 @@
 }
 
 .main-wrapper {
-  // top: 0;
-  // left: 0;
-  // position: absolute;
-  overflow-x: hidden;
-
+  position:absolute;
+  top:0;
+  
   .main {
     height: 100vh;
     width: 100%;
 
     &.a {
       background-color: #fdfde6;
+
+      .logo{
+        height: 60%;
+      }
     }
 
     &.b {
@@ -95,6 +96,16 @@
   top: 35%;
 }
 
+.avatar-changer{
+  cursor: pointer;
+}
+
+.avatars-content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
 .avatars-header-wrapper {
   display: flex;
   justify-content: start;
@@ -106,8 +117,9 @@
   &.a {
     justify-content: start;
     text-align: left;
-    width: 40vh;
+    width: 25%;
     margin-left: 5vw;
+    margin-top: 5vw;
     z-index: 2;
     position: relative;
   }

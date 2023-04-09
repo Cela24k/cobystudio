@@ -24,9 +24,9 @@ export default function ProductTabs(props) {
         aria-label="scrollable force tabs"
         sx={{height:'10vh',bgcolor:'transparent' }}
       >
-      <Tab icon={<Avatar alt="Headphones avatar" src="/Cuffie.webp"/>} />
-      <Tab icon={<Avatar alt="Cafe avatar" src="/Cafe.webp"/>} />
         <Tab icon={<Avatar alt="Bomber avatar" src="/Bomber.webp"/>} />
+        <Tab icon={<Avatar alt="Cafe avatar" src="/Cafe.webp"/>} />
+        <Tab icon={<Avatar alt="Headphones avatar" src="/Cuffie.webp"/>} />
       </Tabs>
     </Box>
   );
