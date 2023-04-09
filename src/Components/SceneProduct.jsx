@@ -7,6 +7,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 function SceneProduct() {
     const mountRef = useRef(null);
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
 
@@ -16,57 +17,67 @@ function SceneProduct() {
         const clock = new THREE.Clock(); // used to control the animation ticks
         const loader = new GLTFLoader(); // needed to load the model 
         var scene = new THREE.Scene();
+        scene.fog = new THREE.Fog( 0xcccccc, 10, 15 );
         var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         var renderer = new THREE.WebGLRenderer({
             antialias: true,
             alpha: true
         });
+
         
         renderer.setSize(window.innerWidth, window.innerHeight);
         mountRef.current.appendChild(renderer.domElement);
-        
+
         var handleWindowResize = () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.render(scene, camera);
         }
-        
+
         window.addEventListener("resize", handleWindowResize);
-        
+
         camera.position.x = 0;
         camera.position.y = 0.05;
         camera.position.z = 1;
         camera.lookAt(new THREE.Vector3(0, 0, 0))
         // camera.rotation.x += 0.8;
         /* SETUP */
-        
-        /* LIGHTS */
-
-        const light = new THREE.AmbientLight('white', 0.3);
-        const direct_light = new THREE.DirectionalLight('white', 2.4);
-        direct_light.position.x = 0;
-        direct_light.position.y = -0.05;
-        direct_light.position.z = 1;
-        camera.add(direct_light);
-
-        scene.add(camera,light);
 
         /* LIGHTS */
+
+        // const light = new THREE.AmbientLight('0xffffff', 0.36);
         
+        const point_light2 = new THREE.PointLight(0xffffff, 1.5, 100);
+        // const direct_light = new THREE.DirectionalLight('0xffffff', 2.4);
+        // const point_light3 = new THREE.PointLight(0xffffff, 1, 100);
+        
+        point_light2.position.set(0, 0, 2);
+        scene.add( point_light2);
+        // point_light3.position.set(0, 0, -10);
+
+        // scene.add(point_light2,point_light3);
+
+        // direct_light.position.set(0,-0.05,0.8);
+        // camera.add(direct_light);
+
+        // scene.add(camera);
+
+        /* LIGHTS */
+
         /* AXES HELPERS */
-        
+
         // const axesHelper = new THREE.AxesHelper(5);
         // scene.add(axesHelper);
-        
+
         /* AXES HELPERS */
-        
+
         /* MODELS */
-        
+
         const dracoLoader = new DRACOLoader();
-        dracoLoader.setDecoderPath( 'https://www.gstatic.com/draco/v1/decoders/' );
-        loader.setDRACOLoader( dracoLoader );
-        
+        dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
+        loader.setDRACOLoader(dracoLoader);
+
         let controls = new OrbitControls(camera, renderer.domElement);
         controls.update();
         controls.enableZoom = false;
@@ -85,7 +96,8 @@ function SceneProduct() {
                 // action.repetitions = 0; // here you can control how many repetitions of the animation
             },
             function (xhr) {
-                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                // console.log(xhr);
+                // console.log((xhr.loaded / 199045732 * 100) + '% loaded');
             },
             function (error) {
                 console.log('An error happened', error);
@@ -134,7 +146,6 @@ function SceneProduct() {
 
     return (
         <div ref={mountRef}>
-
         </div>
     );
 }

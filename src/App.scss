@@ -12,14 +12,19 @@
   }
 }
 
+.css-19kzrtu{
+  padding: 0 !important;
+}
+
 .main-wrapper {
-  top: 0;
-  left: 0;
-  position: absolute;
+  // top: 0;
+  // left: 0;
+  // position: absolute;
   overflow-x: hidden;
 
   .main {
     height: 100vh;
+    width: 100%;
 
     &.a {
       background-color: #fdfde6;
@@ -31,13 +36,27 @@
       color: white;
       background-size: cover;
       background-position: center;
+      position: relative;
+
+      .overlay {
+        height:100%;
+        width:100%;
+        background-color: #00000050;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 1;
+
+      }
     }
 
     &.c {
       background-color: #fdfde6;
+      display: flex;
     }
 
     &.d {
+      display: flex;
       background-color: rgb(0, 0, 0);
     }
 
@@ -80,27 +99,31 @@
   display: flex;
   justify-content: start;
   text-align: left;
-  margin-left: 2vw;
+
+  flex-direction: column;
+  width: 25%;
 
   &.a {
     justify-content: start;
     text-align: left;
     width: 40vh;
     margin-left: 5vw;
+    z-index: 2;
+    position: relative;
   }
 
   &.b {
-    position: absolute;
+    // position: absolute;
     text-align: right;
     right: 5vw;
+    z-index: 99;
   }
 
   &.c {
-    position: absolute;
+    height: 100%;
     color: white;
-    max-width: 800px;
-    /* text-align: right;
-    right: 5vw;  */
+    width: 30%;
+    padding-left: 2vw;
   }
 }
 
@@ -114,14 +137,14 @@
 }
 
 .presentation-wrapper {
-  max-width: 70vh;
+  width: 40%;
   margin-left: 5vw;
   right: 2vh;
   position: relative;
 }
 
 .product-container {
-  bottom: 10vh;
+  bottom:0;
   position: relative;
 }
 
@@ -131,7 +154,10 @@
   top: 90vh;
 }
 
-.product-scene-wrapper {}
+.product-scene-wrapper {
+  height: 100%;
+  width: 60%;
+}
 
 .contact-wrapper {
   padding-top: 10vh;
@@ -155,6 +181,42 @@
       height: 100%;
     }
   }
+}
+
+.viewer{
+  height: 90%;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 991px) {
+  .product-scene-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .viewer{
+    height: 90%;
+    width: 70%;
+    top:20vh;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .product-scene-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  .viewer{
+    height: 90%;
+    width: 90%;
+    top:20vh;
+  }
+}
+
+model-viewer {
+  --progress-bar-color: transparent;
 }
 
 /* 

@@ -4,6 +4,7 @@ import SceneProduct from "./SceneProduct";
 import ProductTabs from "./ProductTabs";
 import { TextField } from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useEffect, useState } from "react";
 
 function Page1() {
   return (
@@ -41,18 +42,19 @@ const feedVideo = (
     loop={true}
     muted={true}
     height={'100vh'}
-    width={'auto'}
+    width={'70%'}
     style={{
       right: '0',
-      position: 'absolute',
     }}
   />
-  
+
 )
 
 function Page2() {
   return (
     <div className="main b" id="2">
+      <div className="overlay">
+      </div>
       <div className="avatars-header-wrapper a ">
         <div>
           <h2 className="my-header">
@@ -77,32 +79,47 @@ function Page2() {
 // COMPONENTE PAGINA PRODOTTI 
 
 function Page3() {
+
+  const [product, setProduct] = useState('models/gltf/Cuffie.glb');
+
+  function handleTabs(tab) {
+    const newUrl = 'models/gltf' + tab.split('.')[0] + '.glb';
+    console.log(newUrl);
+    setProduct(newUrl);
+  }
+
   return (<div className="main c" id="3">
-    <div className="avatars-header-wrapper b">
-      <div className="presentation-wrapper">
-        <h2 className="my-header">
-          PRODUCT PRESENTATION
-        </h2>
-        <span className="my-span">
-          We understand the importance of showcasing your products.
-          This is why we offer professional product presentation services that
-          are designed to help you stand out in the competitive marketplace.
-          Whether you're looking to create visuals for a website, brochure, trade show,
-          or even your own virtual gallery, we've got you covered.
-          With our product presentation services, you can be sure that your that your
-          products will be presented in the best possible way, making a lasting
-          impression on your audience.
-        </span>
-      </div>
-    </div>
     <div className="product-scene-wrapper">
-      <SceneProduct />
-    </div>
-    <div className="product-container">
-      <div className="product-list">
-        <ProductTabs />
+      <model-viewer class="viewer"
+        id="my-model"
+        alt="COBYSTUDIO Bomber"
+        src={product}
+        shadow-intensity="1"
+        camera-controls touch-action="pan-y" autoplay animation-name disable-zoom disable-tap disable-pan
+        poster='Spinner-1s-200px.svg'>
+      </model-viewer>
+      <div className="product-container">
+        <div className="product-list">
+          <ProductTabs tabEvent={handleTabs} />
+        </div>
       </div>
     </div>
+    <div className="avatars-header-wrapper b">
+      <h2 className="my-header">
+        PRODUCT PRESENTATION
+      </h2>
+      <span className="my-span">
+        We understand the importance of showcasing your products.
+        This is why we offer professional product presentation services that
+        are designed to help you stand out in the competitive marketplace.
+        Whether you're looking to create visuals for a website, brochure, trade show,
+        or even your own virtual gallery, we've got you covered.
+        With our product presentation services, you can be sure that your that your
+        products will be presented in the best possible way, making a lasting
+        impression on your audience.
+      </span>
+    </div>
+
   </div>
   )
 }
@@ -110,14 +127,12 @@ function Page3() {
 function Page4() {
   return (
     <div className="main d" id="4">
-      {feedVideo}
       <div className="avatars-header-wrapper c">
         <div>
           <h2 className="my-header" >
             VISUAL ART
           </h2>
           <span className="my-span">
-
             We offer a wide range of visual art services, creating stunning effects
             that are guaranteed to captivate your audience.
             From mesmerizing concert visuals to one of a kind art prints, we have the expertise to bring your vision to life.
@@ -129,6 +144,7 @@ function Page4() {
 
         </div>
       </div>
+      {feedVideo}
     </div>
   )
 }
@@ -168,18 +184,18 @@ function Page5() {
 
 function Page6() {
   return (
-      <ReactPlayer className="main f"
-        url='./video/REEL.mp4'
-        playing={true}
-        loop={true}
-        muted={true}
-        controls={true}
-        height={'100%'}
-        width={'100%'}
-        style={{
-          backgroundColor:"#fdfde6"
-        }}
-      />
+    <ReactPlayer className="main f"
+      url='./video/REEL.mp4'
+      playing={true}
+      loop={true}
+      muted={true}
+      controls={true}
+      height={'100%'}
+      width={'100%'}
+      style={{
+        backgroundColor: "#fdfde6"
+      }}
+    />
   )
 }
 

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { pink } from '@mui/material/colors';
 import Radio from '@mui/material/Radio';
 import { useState, useEffect } from 'react';
+
 export default function ColorRadioButtons() {
   const [selectedValue, setSelectedValue] = React.useState('a');
 
@@ -24,6 +25,9 @@ export default function ColorRadioButtons() {
 
   useEffect(() => {
     window.addEventListener('scroll',(e)=>{
+
+      //breakpoints
+
       // console.log(e);
     })
   }, []);

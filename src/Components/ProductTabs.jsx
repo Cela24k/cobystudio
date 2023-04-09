@@ -4,11 +4,13 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { Avatar } from '@mui/material';
 
-export default function ProductTabs() {
+export default function ProductTabs(props) {
   const [value, setValue] = React.useState(0);
+  const tabs = ['/Bomber.webp','/Cafe.webp','/Cuffie.webp'];
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    props.tabEvent(tabs[newValue]);
   };
 
   return (
@@ -19,12 +21,12 @@ export default function ProductTabs() {
         variant="scrollable"
         scrollButtons
         allowScrollButtonsMobile
-        aria-label="scrollable force tabs example"
+        aria-label="scrollable force tabs"
         sx={{height:'10vh',bgcolor:'transparent' }}
       >
-        <Tab icon={<Avatar alt="test avatar" src="/Bomber.webp"/>} />
-        <Tab icon={<Avatar alt="test avatar" src="/Cafe.webp"/>} />
-        <Tab icon={<Avatar alt="test avatar" src="/Cuffie.webp"/>} />
+      <Tab icon={<Avatar alt="Headphones avatar" src="/Cuffie.webp"/>} />
+      <Tab icon={<Avatar alt="Cafe avatar" src="/Cafe.webp"/>} />
+        <Tab icon={<Avatar alt="Bomber avatar" src="/Bomber.webp"/>} />
       </Tabs>
     </Box>
   );
