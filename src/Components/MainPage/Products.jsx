@@ -1,5 +1,5 @@
 import ProductTabs from "./ProductTabs";
-import {  useState } from "react";
+import { useState } from "react";
 
 function Products() {
     const [product, setProduct] = useState('models/gltf/Bomber.glb');
@@ -27,7 +27,7 @@ function Products() {
                 </div>
             </div>
         </div>
-        <div className="avatars-header-wrapper b">
+        {/*<div className="avatars-header-wrapper b">
             <h2 className="my-header">
                 PRODUCT PRESENTATION
             </h2>
@@ -41,7 +41,7 @@ function Products() {
                 products will be presented in the best possible way, making a lasting
                 impression on your audience.
             </span>
-        </div>
+        </div>*/}
 
     </div>
     )
