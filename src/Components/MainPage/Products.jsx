@@ -1,8 +1,8 @@
-import ProductTabs from "../ProductTabs";
+import ProductTabs from "./ProductTabs";
 import {  useState } from "react";
 
 function Products() {
-    const [product, setProduct] = useState('models/gltf/Cuffie.glb');
+    const [product, setProduct] = useState('models/gltf/Bomber.glb');
 
     function handleTabs(tab) {
         const newUrl = 'models/gltf' + tab.split('.')[0] + '.glb';
@@ -16,6 +16,7 @@ function Products() {
                 id="my-model"
                 alt="COBYSTUDIO Bomber"
                 src={product}
+                width="100vw"
                 shadow-intensity="1"
                 camera-controls touch-action="pan-y" autoplay animation-name disable-zoom disable-tap disable-pan
                 poster='Spinner-1s-200px.svg'>
