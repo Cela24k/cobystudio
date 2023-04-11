@@ -18,19 +18,19 @@ function SceneLogo() {
         const loader = new GLTFLoader(); // needed to load the model 
 
         var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(75, window.screen.width / window.screen.height , 0.1, 1000);
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight , 0.1, 1000);
         var renderer = new THREE.WebGLRenderer({
             antialias: true,
             alpha: true
         });
 
-        renderer.setSize(window.screen.width, window.screen.height);
+        renderer.setSize(window.innerWidth, window.innerHeight);
         mountRef.current.appendChild(renderer.domElement);
 
         var handleWindowResize = () => {
-            camera.aspect = window.screen.width / window.screen.height;
+            camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
-            renderer.setSize(window.screen.width, window.screen.height);
+            renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.render(scene, camera);
         }
 
@@ -105,8 +105,8 @@ function SceneLogo() {
         // document.addEventListener('')
 
         function onMouseMove(event) {
-            mouse.x = (event.clientX / window.screen.width) * 2 - 1;
-            mouse.y = (event.clientY / window.screen.height) * 2 + 1;
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = (event.clientY / window.innerHeight) * 2 + 1;
 
             const rotation = new THREE.Euler(
                 mouse.y * -0.1, // rotate on the x-axis based on the mouse y position
