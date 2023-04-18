@@ -27,6 +27,10 @@ export default function DrawerAppBar(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const handleTabClick = (e) => {
+    console.log(e);
+  };
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center'}}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -36,7 +40,7 @@ export default function DrawerAppBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton onClick={handleTabClick} sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>

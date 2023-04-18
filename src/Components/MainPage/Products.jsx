@@ -27,7 +27,7 @@ function Products() {
                 </div>
             </div>
         </div>
-        {/*<div className="avatars-header-wrapper b">
+        {<div className="avatars-header-wrapper b">
             <h2 className="my-header">
                 PRODUCT PRESENTATION
             </h2>
@@ -41,7 +41,7 @@ function Products() {
                 products will be presented in the best possible way, making a lasting
                 impression on your audience.
             </span>
-        </div>*/}
+        </div>}
 
     </div>
     )

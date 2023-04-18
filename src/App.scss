@@ -63,8 +63,35 @@
 
     &.e {
       background-color: #fdfde6;
-      display: flex;
+      // display: flex;
       justify-content: center;
+      
+      .image-wrapper{
+        width: 100vw;
+        height: 50%;
+
+        .studio-image{
+          width: 100vw;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .portfolio-container{
+          width: 100%;
+          height: 50vh;
+          // border: 1px solid red;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+
+          .portfolio-dialog{
+
+          }
+
+        }
+      }
+
+
     }
 
     &.f {
@@ -81,7 +108,8 @@
   display: flex;
   justify-content: center;
   align-items: end;
-
+  cursor: pointer;
+  
   .header-container {
     margin-bottom: 2vw;
   }
@@ -135,7 +163,7 @@
     height: 100%;
     color: white;
     width: 30%;
-    padding-left: 2vw;
+    padding-left: 5vw;
   }
 }
 
@@ -171,26 +199,30 @@
   width: 60%;
 }
 
-.contact-wrapper {
-  padding-top: 10vh;
-  width: 50vw;
-  height: 100vh;
-  min-width: 300px;
-
-  .contact-row {
-    column-gap: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .form-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    .form-divider {
-      width: 2.5vw;
-      height: 100%;
+.contact-flex-container{
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+  .contact-wrapper {
+    padding-top: 10vh;
+    min-width: 300px;
+  
+    .contact-row {
+      column-gap: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .form-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  
+      .form-divider {
+        width: 2.5vw;
+        height: 100%;
+      }
     }
   }
 }

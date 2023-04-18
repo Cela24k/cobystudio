@@ -8,9 +8,9 @@ const evaVideo = (
         loop={true}
         muted={true}
         width={'50%'}
-        height={'80%'}
+        height={'100%'}
         style={{
-            position:'absolute',
+            // position:'absolute',
             zIndex: 1,
             right:0,
             bottom:0

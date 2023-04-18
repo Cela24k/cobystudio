@@ -6,10 +6,18 @@ import Avatars from "./MainPage/Avatars"
 import Contact from "./MainPage/Contact"
 import Products from "./MainPage/Products";
 function Logo() {
+
+  function handleClick(){
+    const scrollTarget = document.getElementsByClassName('main f')
+
+    if (scrollTarget)
+      scrollTarget[0].scrollIntoView(false);
+  }
+
   return (
     <div className="main a" id="1">
       <SceneLogo />
-      <div className="header-wrapper">
+      <div className="header-wrapper" onClick={handleClick}>
         <div className="header-container">
           <h1 style={{ margin: 0 }}>3D Provider</h1>
           <h2 style={{ fontWeight: 100, margin: 0 }}>Bringing your ideas to life</h2>
