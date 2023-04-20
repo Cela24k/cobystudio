@@ -5,6 +5,17 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Avatars from "./MainPage/Avatars"
 import Contact from "./MainPage/Contact"
 import Products from "./MainPage/Products";
+import { useState, useEffect } from 'react';
+
+function getScrollPercent() {
+  var h = document.documentElement,
+    b = document.body,
+    st = 'scrollTop',
+    sh = 'scrollHeight';
+  return (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+}
+
+
 function Logo() {
 
   function handleClick(){
@@ -70,10 +81,20 @@ function VisualArt() {
 
 
 function Reel() {
+
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', (event) => {
+      if(Math.floor(getScrollPercent()) >= 15 )
+        setPlaying(true);
+    })
+  }, [])
+
   return (
     <ReactPlayer className="main f"
       url='./video/REEL.mp4'
-      playing={true}
+      playing={playing}
       loop={true}
       muted={true}
       controls={true}
