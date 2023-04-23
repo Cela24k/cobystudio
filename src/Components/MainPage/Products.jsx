@@ -1,6 +1,8 @@
 import ProductTabs from "./ProductTabs";
 import { useState } from "react";
 
+const prods = ['models/gltf/Bomber.glb', 'models/gltf/Cafe.glb', 'models/gltf/Cuffie.glb']
+
 function Products() {
     const [product, setProduct] = useState('models/gltf/Bomber.glb');
 
@@ -13,51 +15,22 @@ function Products() {
     return (<div className="main c container-fluid" id="3">
         <div className="row ">
             <div className="product-scene-wrapper col-12 col-sm-6 col-lg-4">
-                {
-                    product === 'models/gltf/Bomber.glb' ?
-                        <model-viewer class="viewer"
-                            preload
-                            id="my-model"
-                            alt="COBYSTUDIO Bomber"
-                            src='models/gltf/Bomber.glb'
-                            width="100vw"
-                            shadow-intensity="1"
-                            camera-controls touch-action="pan-y" autoplay animation-name disable-zoom disable-tap disable-pan
-                            poster='Spinner-1s-200px.svg'>
-                        </model-viewer>
-                        : null
-                }
-                {
-                    product === 'models/gltf/Cafe.glb' ?
-                        <model-viewer class="viewer"
-                            preload
-                            id="my-model"
-                            alt="COBYSTUDIO Bomber"
-                            src='models/gltf/Cafe.glb'
-                            width="100vw"
-                            shadow-intensity="1"
-                            camera-controls touch-action="pan-y" autoplay animation-name disable-zoom disable-tap disable-pan
-                            poster='Spinner-1s-200px.svg'>
-                        </model-viewer>
-                        :
-                        null
-                }
-                {
-                    product === 'models/gltf/Cuffie.glb' ?
-                        <model-viewer class="viewer"
-                            preload
-                            id="my-model"
-                            alt="COBYSTUDIO Bomber"
-                            src='models/gltf/Cuffie.glb'
-                            width="100vw"
-                            shadow-intensity="1"
-                            camera-controls touch-action="pan-y" autoplay animation-name disable-zoom disable-tap disable-pan
-                            poster='Spinner-1s-200px.svg'>
-                        </model-viewer>
-                        :
-                        null
-                }
-
+                {prods.map((e, i) => {
+                    if (product === e) {
+                        return (
+                            <model-viewer key={i} class="viewer"
+                                preload
+                                id="my-model"
+                                alt="COBYSTUDIO Bomber"
+                                src={e}
+                                width="100vw"
+                                shadow-intensity="1"
+                                camera-controls touch-action="pan-y" autoplay animation-name disable-zoom disable-tap disable-pan
+                                poster='Spinner-1s-200px.svg'>
+                            </model-viewer>)
+                    }
+                    else return null;
+                })}
                 <div className="product-container">
                     <div className="product-list">
                         <ProductTabs tabEvent={handleTabs} />
