@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 
 function Contact() {
     return (
@@ -39,7 +39,7 @@ function Contact() {
                     </div>
 
                     <div className="send-row">
-
+                        <Button className="send-button" variant="outlined">Send</Button>
                     </div>
 
                 </div>

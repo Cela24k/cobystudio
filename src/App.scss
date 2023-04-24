@@ -302,6 +302,7 @@
   height: 100%;
   width: 100%;
   padding: 15px;
+  padding-bottom: 0px;
 }
 
 .visual-reel-container {
@@ -329,6 +330,18 @@
       column-gap: 10px;
       display: flex;
       justify-content: space-between;
+    }
+
+    .send-row{
+      padding: 15px;
+      display: flex;
+      justify-content: end;
+
+      .send-button{
+        color: #1d1d1d;
+        border-color: rgba(128, 128, 128, 0.404);
+        border-radius: 5px;
+      }
     }
 
     .form-wrapper {
