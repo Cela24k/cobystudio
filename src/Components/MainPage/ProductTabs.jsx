@@ -22,7 +22,7 @@ export default function ProductTabs(props) {
         scrollButtons
         allowScrollButtonsMobile
         aria-label="scrollable force tabs"
-        sx={{height:'10vh',bgcolor:'transparent' }}
+        sx={{height:'100%',bgcolor:'transparent' }}
       >
         <Tab icon={<Avatar alt="Bomber avatar" src="/Bomber.webp"/>} />
         <Tab icon={<Avatar alt="Cafe avatar" src="/Cafe.webp"/>} />

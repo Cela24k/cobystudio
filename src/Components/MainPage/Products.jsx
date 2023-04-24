@@ -13,31 +13,31 @@ function Products() {
     }
 
     return (<div className="main c container-fluid" id="3">
-        <div className="row ">
-            <div className="product-scene-wrapper col-12 col-sm-6 col-lg-4">
-                {prods.map((e, i) => {
-                    if (product === e) {
-                        return (
-                            <model-viewer key={i} class="viewer"
-                                preload
-                                id="my-model"
-                                alt="COBYSTUDIO Bomber"
-                                src={e}
-                                width="100vw"
-                                shadow-intensity="1"
-                                camera-controls touch-action="pan-y" autoplay animation-name disable-zoom disable-tap disable-pan
-                                poster='Spinner-1s-200px.svg'>
-                            </model-viewer>)
-                    }
-                    else return null;
-                })}
-                <div className="product-container">
-                    <div className="product-list">
-                        <ProductTabs tabEvent={handleTabs} />
-                    </div>
+        <div className="row product-row">
+            <div className="product-scene-wrapper col-12 col-sm-8 col-lg-6">
+                <div className="product-viewer-container">
+                    {prods.map((e, i) => {
+                        if (product === e) {
+                            return (
+                                <model-viewer key={i} class="viewer"
+                                    preload
+                                    id="my-model"
+                                    alt="COBYSTUDIO Bomber"
+                                    src={e}
+                                    width="100vw"
+                                    shadow-intensity="1"
+                                    camera-controls touch-action="pan-y" autoplay animation-name disable-zoom disable-tap disable-pan
+                                    poster='Spinner-1s-200px.svg'>
+                                </model-viewer>)
+                        }
+                        else return null;
+                    })}
+                </div>
+                <div className="product-list">
+                    <ProductTabs tabEvent={handleTabs} />
                 </div>
             </div>
-            {<div className="avatars-header-wrapper b col-12 col-sm-6 col-lg-4">
+            <div className="avatars-header-wrapper b col-12 col-sm-6 col-lg-4">
                 <h2 className="my-header">
                     PRODUCT PRESENTATION
                 </h2>
@@ -51,9 +51,8 @@ function Products() {
                     products will be presented in the best possible way, making a lasting
                     impression on your audience.
                 </span>
-            </div>}
+            </div>
         </div>
-
     </div>
     )
 }

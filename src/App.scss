@@ -11,14 +11,15 @@
   }
 }
 
-.css-19kzrtu{
+.css-19kzrtu {
   padding: 0 !important;
 }
 
 .main-wrapper {
-  position:absolute;
-  top:0;
+  position: absolute;
+  top: 0;
   width: 100vw;
+
   .main {
     height: 100vh;
     width: 100%;
@@ -26,7 +27,7 @@
     &.a {
       background-color: #fdfde6;
 
-      .logo{
+      .logo {
         height: 60%;
       }
     }
@@ -40,12 +41,12 @@
       position: relative;
 
       .overlay {
-        height:100%;
-        width:100%;
+        height: 100%;
+        width: 100%;
         background-color: #00000050;
         position: absolute;
-        top:0;
-        left:0;
+        top: 0;
+        left: 0;
         z-index: 1;
 
       }
@@ -53,7 +54,7 @@
 
     &.c {
       background-color: #fdfde6;
-      display: flex;
+      // position:relative;
     }
 
     &.d {
@@ -65,18 +66,18 @@
       background-color: #fdfde6;
       // display: flex;
       justify-content: center;
-      
-      .image-wrapper{
+
+      .image-wrapper {
         width: 100vw;
         height: 50%;
 
-        .studio-image{
+        .studio-image {
           width: 100vw;
           height: 100%;
           object-fit: cover;
         }
 
-        .portfolio-container{
+        .portfolio-container {
           width: 100%;
           height: 50vh;
           // border: 1px solid red;
@@ -84,9 +85,7 @@
           display: flex;
           justify-content: center;
 
-          .portfolio-dialog{
-
-          }
+          .portfolio-dialog {}
 
         }
       }
@@ -109,9 +108,10 @@
   justify-content: center;
   align-items: end;
   cursor: pointer;
-  
+
   .header-container {
     margin-bottom: 2vw;
+    font-size:'xxx-large'
   }
 }
 
@@ -124,11 +124,11 @@
   top: 35%;
 }
 
-.avatar-changer{
+.avatar-changer {
   cursor: pointer;
 }
 
-.avatars-content{
+.avatars-content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -138,7 +138,7 @@
   display: flex;
   justify-content: start;
   text-align: left;
-
+  padding-top: 5vw;
   flex-direction: column;
   // width: 25%;
 
@@ -150,13 +150,13 @@
     margin-top: 5vw;
     z-index: 2;
     position: relative;
+
   }
 
   &.b {
     // position: absolute;
     text-align: right;
     right: 5vw;
-    z-index: 99;
   }
 
   &.c {
@@ -167,14 +167,29 @@
   }
 }
 
+
 .my-header {
   font-family: 'Poppins', sans-serif;
-  margin-top: 8vh;
+}
+
+@media screen and (max-width: 575px) {
+  .my-header {
+    font-size: x-large;
+  }
 }
 
 .my-span {
   font-family: 'Nunito Sans', sans-serif;
+
 }
+
+@media screen and (max-width: 575px) {
+  .my-span {
+    font-size: smaller;  
+  }
+}
+
+
 
 .presentation-wrapper {
   width: 40%;
@@ -183,42 +198,49 @@
   position: relative;
 }
 
+.product-row {
+  height: 100%;
+  width: 100%;
+}
+
+.product-viewer-container{
+  height: 90%;
+}
+
 .product-container {
-  bottom:0;
+  bottom: 0;
   position: relative;
 }
 
 .product-list {
-  width: 100vw;
-  height: 10vh;
-  top: 90vh;
+  height: 10%;;
 }
 
 .product-scene-wrapper {
   height: 100%;
-  width: 60%;
 }
 
-.contact-flex-container{
+.contact-flex-container {
   display: flex;
   width: 100%;
   height: 50%;
   justify-content: center;
+
   .contact-wrapper {
     padding-top: 10vh;
     min-width: 300px;
-  
+
     .contact-row {
       column-gap: 10px;
       display: flex;
       justify-content: space-between;
     }
-  
+
     .form-wrapper {
       width: 100%;
       display: flex;
       justify-content: center;
-  
+
       .form-divider {
         width: 2.5vw;
         height: 100%;
@@ -227,36 +249,37 @@
   }
 }
 
-.viewer{
+.viewer {
   height: 90%;
   width: 100%;
 }
 
 
-@media screen and (max-width: 991px) {
-  .product-scene-wrapper {
-    height: 100%;
-    width: 100%;
-  }
-  
-  .viewer{
-    height: 90%;
-    width: 70%;
-    top:20vh;
-  }
-}
+// @media screen and (max-width: 991px) {
+//   .product-scene-wrapper {
+//     height: 100%;
+//     width: 100%;
+//   }
+
+//   .viewer{
+//     height: 90%;
+//     width: 70%;
+//     top:20vh;
+//   }
+// }
 
 @media screen and (max-width: 575px) {
   .product-scene-wrapper {
-    height: 100%;
+    height: 60%;
     width: 100%;
   }
+}
+// }
 
-  .viewer{
-    height: 90%;
-    width: 90%;
-    top:20vh;
-  }
+.viewer {
+  height: 100%;
+  width: 100%;
+  // top:20vh;
 }
 
 model-viewer {
