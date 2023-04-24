@@ -72,7 +72,7 @@ function Logo() {
       <div className="row logo-header-wrapper" onClick={handleClick}>
         <div className="header-container">
           <h1 className="header-content" >3D Provider</h1>
-          <h2 className="header-content" >Bringing your ideas to life</h2>
+          <h2 className="header-subcontent" >Bringing your ideas to life</h2>
           <KeyboardArrowDownIcon />
         </div>
       </div>

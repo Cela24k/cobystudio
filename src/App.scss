@@ -115,6 +115,10 @@
 .header-content {
   font-size: xx-large;
 }
+.header-subcontent{
+  font-size: x-large;
+
+}
 
 .header-wrapper {
   width: 100vw;
@@ -238,7 +242,7 @@
 .visual-container{
   height: 100%;
   width: 100%;
-
+  padding:15px;
 }
 
 .visual-reel-container{
@@ -257,7 +261,7 @@
   height: 50%;
   justify-content: center;
   padding: 20px;
-  
+
   .contact-wrapper {
     padding-top: 10vh;
     min-width: 300px;

@@ -31,8 +31,12 @@ export default function DrawerAppBar(props) {
     console.log(e);
   };
 
+  const handleHomeButton = (e)=>{
+    document.querySelector('#my-model-logo').scrollIntoView({ behavior: 'smooth' });
+  }
+
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center'}}>
+    <Box sx={{ textAlign: 'center'}}>
       <Typography variant="h6" sx={{ my: 2 }}>
         <img src='./images/logo.svg' alt='' width={'180px'} height={'60px'} style={{ marginRight: '24px', verticalAlign: 'bottom' }}></img>
       </Typography>
@@ -65,7 +69,7 @@ export default function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <img src='./images/logo.svg' alt='' width={'180px'} height={'60px'} style={{ marginRight: '24px', verticalAlign: 'bottom' }}></img>
+          <img onClick={handleHomeButton} src='./images/logo.svg' alt='' width={'180px'} height={'60px'} style={{ marginRight: '24px', verticalAlign: 'bottom', cursor:'pointer' }}></img>
           <Typography
             variant="inherit"
             component="div"

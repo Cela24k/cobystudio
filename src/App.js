@@ -10,20 +10,6 @@ const models = [
 ];
 
 function App() {
-
-  useEffect(() => {
-    async function preloadModels() {
-      const promises = models.map(async (model) => {
-        const response = await fetch(model);
-        const buffer = await response.arrayBuffer();
-        const url = URL.createObjectURL(new Blob([buffer]));
-        return url;
-      });
-      await Promise.all(promises);
-    }
-    preloadModels();
-  }, [])
-
   return (
     <div className="App">
       <DrawerAppBar />
