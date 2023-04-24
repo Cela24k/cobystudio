@@ -70,6 +70,14 @@
       .image-wrapper {
         width: 100vw;
         height: 50%;
+        
+        .image-filter-panel {
+          position: absolute;
+          height: 50vh;
+          width: 100%;
+          background-color: #6350ff17;
+          filter: blur(4px);
+        }
 
         .studio-image {
           width: 100vw;
@@ -84,9 +92,58 @@
           position: absolute;
           display: flex;
           justify-content: center;
+          flex-direction: column;
 
-          .portfolio-dialog {}
+          .portfolio-dialog {
+            width: 50%;
+            align-self: center;
+            background-color: rgba(0, 0, 0, 0.452);
+            padding: 10px;
+            border-radius: 40px;
+            color: white;
+            font-family: "Nunito Sans", sans-serif;
+            font-size: smaller;
+          }
+          
+          @media screen and (max-width: 575px) {
+            .portfolio-dialog {
+              width: 90%;
+              align-self: center;
+              background-color: rgba(0, 0, 0, 0.452);
+              padding: 5px;
+              border-radius: 20px;
+              color: white;
+              font-family: "Nunito Sans", sans-serif;
+              font-size: smaller;
+            }
+          }
 
+          .portfolio-dialog-link {
+            margin-top: 30px;
+            width: 5%;
+            align-self: center;
+            background-color: rgba(0, 0, 0, 0.452);
+            padding: 5px;
+            border-radius: 20px;
+            color: white;
+            font-family: "Nunito Sans", sans-serif;
+            font-size: smaller;
+            cursor:pointer;
+            font-weight: bold;
+          }
+
+          @media screen and (max-width: 575px) {
+            .portfolio-dialog-link {
+              width: 30%;
+              align-self: center;
+              background-color: rgba(0, 0, 0, 0.452);
+              padding: 5px;
+              border-radius: 20px;
+              color: white;
+              font-family: "Nunito Sans", sans-serif;
+              font-size: smaller;
+            }
+          }
         }
       }
 
@@ -99,12 +156,13 @@
   }
 }
 
-.logo-header-wrapper{
+
+.logo-header-wrapper {
   height: 20%;
   cursor: pointer;
 }
 
-.logo-row{
+.logo-row {
   height: 80%;
 }
 
@@ -115,9 +173,9 @@
 .header-content {
   font-size: xx-large;
 }
-.header-subcontent{
-  font-size: x-large;
 
+.header-subcontent {
+  font-size: x-large;
 }
 
 .header-wrapper {
@@ -130,7 +188,7 @@
   align-items: end;
   cursor: pointer;
 
-  
+
 }
 
 .radio-buttons-wrapper {
@@ -199,7 +257,7 @@
 
 @media screen and (max-width: 575px) {
   .my-span {
-    font-size: smaller;  
+    font-size: smaller;
   }
 }
 
@@ -222,7 +280,7 @@
   }
 }
 
-.product-viewer-container{
+.product-viewer-container {
   height: 90%;
 }
 
@@ -232,20 +290,21 @@
 }
 
 .product-list {
-  height: 10%;;
+  height: 10%;
+  ;
 }
 
 .product-scene-wrapper {
   height: 100%;
 }
 
-.visual-container{
+.visual-container {
   height: 100%;
   width: 100%;
-  padding:15px;
+  padding: 15px;
 }
 
-.visual-reel-container{
+.visual-reel-container {
   height: 100%;
 }
 
@@ -310,6 +369,7 @@
     width: 100%;
   }
 }
+
 // }
 
 .viewer {
