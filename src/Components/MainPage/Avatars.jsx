@@ -51,7 +51,7 @@ function Avatars() {
         <div className="main b container-fluid" id="2">
             <div className="overlay">
             </div>
-            <div className="row avatars-content">
+            <div className="row justify-content-center avatars-content">
                 <div className="avatars-header-wrapper a col-12 col-sm-6 col-lg-4">
                     <div>
                         <h2 className="my-header">

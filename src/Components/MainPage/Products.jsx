@@ -13,7 +13,7 @@ function Products() {
     }
 
     return (<div className="main c container-fluid" id="3">
-        <div className="row product-row">
+        <div className="row justify-content-center product-row">
             <div className="product-scene-wrapper col-12 col-sm-8 col-lg-6">
                 <div className="product-viewer-container">
                     {prods.map((e, i) => {

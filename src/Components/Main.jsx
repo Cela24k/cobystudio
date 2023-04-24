@@ -18,20 +18,61 @@ function getScrollPercent() {
 
 function Logo() {
 
-  function handleClick(){
+  function handleClick() {
     const scrollTarget = document.getElementsByClassName('main f')
 
     if (scrollTarget)
       scrollTarget[0].scrollIntoView(false);
   }
 
+  useEffect(() => {
+    const mw = document.querySelector('#my-model-logo');
+
+    // const reverse_play = ()=>{
+    //   mw.timeScale = -1;
+    //   mw.play({repetitions:1})
+    //   setInterval(()=>{
+    //     mw.pause();
+    //     play();
+    //   },6000)
+    // }
+
+    // const play = ()=>{
+    //   mw.timeScale = 1;
+    //   mw.play({repetitions:1})
+    //   setInterval(()=>{
+    //     mw.pause();
+    //     reverse_play();
+    //   },6000)
+    // }
+
+    const play = ()=>{
+      mw.timeScale = 1;
+      mw.play({repetitions:1})
+    }
+
+    mw.addEventListener('load', play);
+    mw.addEventListener('finish', play);
+  }, [])
+
   return (
-    <div className="main a" id="1">
-      <SceneLogo />
-      <div className="header-wrapper" onClick={handleClick}>
+    <div className="container-fluid main a" id="1">
+      <div className="row logo-row">
+        <model-viewer class="viewer"
+          preload
+          id="my-model-logo"
+          alt="COBYSTUDIO Logo"
+          src='models/gltf/Coby.glb'
+          width="100vw"
+          shadow-intensity="1"
+          camera-controls touch-action="pan-y" animation-name disable-zoom disable-tap disable-pan
+          poster='Spinner-1s-200px.svg'>
+        </model-viewer>
+      </div>
+      <div className="row logo-header-wrapper" onClick={handleClick}>
         <div className="header-container">
-          <h1 style={{ margin: 0 }}>3D Provider</h1>
-          <h2 style={{ fontWeight: 100, margin: 0 }}>Bringing your ideas to life</h2>
+          <h1 className="header-content" >3D Provider</h1>
+          <h2 className="header-content" >Bringing your ideas to life</h2>
           <KeyboardArrowDownIcon />
         </div>
       </div>
@@ -86,7 +127,7 @@ function Reel() {
 
   useEffect(() => {
     window.addEventListener('scroll', (event) => {
-      if(Math.floor(getScrollPercent()) >= 15 )
+      if (Math.floor(getScrollPercent()) >= 15)
         setPlaying(true);
     })
   }, [])

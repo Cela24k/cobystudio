@@ -99,6 +99,23 @@
   }
 }
 
+.logo-header-wrapper{
+  height: 30%;
+  cursor: pointer;
+}
+
+.logo-row{
+  height: 70%;
+}
+
+.header-container {
+  padding-top: 5vh;
+}
+
+.header-content {
+  font-size: xx-large;
+}
+
 .header-wrapper {
   width: 100vw;
   height: 100%;
@@ -109,10 +126,7 @@
   align-items: end;
   cursor: pointer;
 
-  .header-container {
-    margin-bottom: 2vw;
-    font-size:'xxx-large'
-  }
+  
 }
 
 .radio-buttons-wrapper {
@@ -167,7 +181,6 @@
   }
 }
 
-
 .my-header {
   font-family: 'Poppins', sans-serif;
 }
@@ -201,6 +214,12 @@
 .product-row {
   height: 100%;
   width: 100%;
+}
+
+@media screen and (max-width: 575px) {
+  .product-row {
+    flex-direction: column-reverse;
+  }
 }
 
 .product-viewer-container{
