@@ -46,9 +46,9 @@ function Logo() {
     //   },6000)
     // }
 
-    const play = ()=>{
+    const play = () => {
       mw.timeScale = 1;
-      mw.play({repetitions:1})
+      mw.play({ repetitions: 1 })
     }
 
     mw.addEventListener('load', play);
@@ -86,11 +86,9 @@ const feedVideo = (
     playing={true}
     loop={true}
     muted={true}
-    height={'100vh'}
-    width={'70%'}
-    style={{
-      right: '0',
-    }}
+    height={'100%'}
+    width={'100%'}
+  
   />
 )
 
@@ -98,24 +96,28 @@ const feedVideo = (
 
 function VisualArt() {
   return (
-    <div className="main d" id="4">
-      <div className="avatars-header-wrapper c">
-        <div>
-          <h2 className="my-header" >
-            VISUAL ART
-          </h2>
-          <span className="my-span">
-            We offer a wide range of visual art services, creating stunning effects
-            that are guaranteed to captivate your audience.
-            From mesmerizing concert visuals to one of a kind art prints, we have the expertise to bring your vision to life.
-            Our 3D art is not only about appearance but also interactive, which makes it a great choice for art toys
-            or unique 3D prints for artists.
-            Let us help you take your projects to the next level with our visually striking and unique 3D art.
-            Contact us today to learn more about how we can help you create something truly special.
-          </span>
+    <div className="container-fluid main d" id="4">
+      <div className="row justify-content-center visual-container">
+        <div className="col-12 col-sm-6 col-lg-4 avatars-header-wrapper c">
+          <div>
+            <h2 className="my-header" >
+              VISUAL ART
+            </h2>
+            <span className="my-span">
+              We offer a wide range of visual art services, creating stunning effects
+              that are guaranteed to captivate your audience.
+              From mesmerizing concert visuals to one of a kind art prints, we have the expertise to bring your vision to life.
+              Our 3D art is not only about appearance but also interactive, which makes it a great choice for art toys
+              or unique 3D prints for artists.
+              Let us help you take your projects to the next level with our visually striking and unique 3D art.
+              Contact us today to learn more about how we can help you create something truly special.
+            </span>
+          </div>
+        </div>
+        <div className="col-12 col-sm-8 col-lg-6 visual-reel-container">
+          {feedVideo}
         </div>
       </div>
-      {feedVideo}
     </div>
   )
 }

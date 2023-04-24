@@ -68,7 +68,7 @@ function Avatars() {
                         </u>
                     </div>
                 </div>
-                <div className="col-12 col-sm-6 col-lg-4 offset-lg-3">
+                <div className="col-12 col-sm-8 col-lg-6">
                     {avatar ? evaVideo : otherVideo}
                 </div>
             </div>
