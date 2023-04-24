@@ -67,6 +67,7 @@ function Logo() {
           shadow-intensity="1"
           camera-controls touch-action="pan-y" animation-name disable-zoom disable-tap disable-pan
           poster='Spinner-1s-200px.svg'>
+          <div slot="interaction-prompt"></div>
         </model-viewer>
       </div>
       <div className="row logo-header-wrapper" onClick={handleClick}>
