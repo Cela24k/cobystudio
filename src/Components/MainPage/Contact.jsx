@@ -35,7 +35,7 @@ function Contact() {
                     </div>
 
                     <div className="contact-row">
-                        <TextField multiline rows={2} fullWidth id="standard-basic" label="Message" variant="standard" />
+                        <TextField multiline maxRows={4} fullWidth id="standard-basic" label="Message" variant="standard" />
                     </div>
 
                     <div className="send-row">
