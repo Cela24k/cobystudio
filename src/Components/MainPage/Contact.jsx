@@ -1,6 +1,13 @@
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Snackbar } from "@mui/material";
+import { useState } from "react";
 
 function Contact() {
+    const [open, setOpen] = useState(false);
+
+    const handleSend = () => {
+        setOpen(true);
+    }
+
     return (
         <div className="main e" id="5">
             <div className="image-wrapper">
