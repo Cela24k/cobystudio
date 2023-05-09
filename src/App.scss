@@ -237,6 +237,7 @@
   &.c {
     height: 40%;
     color: white;
+    z-index: 2;
   }
 }
 
@@ -290,7 +291,6 @@
 
 .product-list {
   height: 10%;
-  ;
 }
 
 .product-scene-wrapper {

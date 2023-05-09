@@ -81,21 +81,42 @@ function Logo() {
   )
 }
 
-const feedVideo = (
-  <ReactPlayer
-    url='./video/Voglia_Di_Feed.webm'
-    playing={true}
-    loop={true}
-    muted={true}
-    height={'100%'}
-    width={'100%'}
-  
-  />
-)
+const feedVideo = (val) => {
+  const videos = ['./video/Voglia_Di_Feed.webm', './video/Bomber_Turntable.mp4']
+  return (
+    val ?
+      <ReactPlayer
+        url={videos[0]}
+        playing={true}
+        loop={true}
+        muted={true}
+        height={'100%'}
+        width={'100%'}
+      />
+      :
+      <ReactPlayer
+        url={videos[1]}
+        playing={true}
+        loop={true}
+        muted={true}
+        height={'100%'}
+        width={'100%'}
+      />
+  )
+}
+
 
 // COMPONENTE PAGINA PRODOTTI 
 
 function VisualArt() {
+  const [currentVideo, setCurrentVideo] = useState(true)
+
+  function handleChange(event) {
+    setCurrentVideo((prev) => {
+      return !prev;
+    })
+  }
+
   return (
     <div className="container-fluid main d" id="4">
       <div className="row justify-content-center visual-container">
@@ -113,10 +134,14 @@ function VisualArt() {
               Let us help you take your projects to the next level with our visually striking and unique 3D art.
               Contact us today to learn more about how we can help you create something truly special.
             </span>
+            <br />
+            <u className="avatar-changer" onClick={handleChange}>
+              Click to switch artwork
+            </u>
           </div>
         </div>
         <div className="col-12 col-sm-8 col-lg-6 visual-reel-container">
-          {feedVideo}
+          {feedVideo(currentVideo)}
         </div>
       </div>
     </div>
@@ -130,6 +155,8 @@ function Reel() {
 
   useEffect(() => {
     window.addEventListener('scroll', (event) => {
+
+      // :^3 hard coded at 15% 
       if (Math.floor(getScrollPercent()) >= 15)
         setPlaying(true);
     })
@@ -137,7 +164,7 @@ function Reel() {
 
   return (
     <ReactPlayer className="main f"
-      url='./video/REEL.mp4'
+      url='./video/REEL_new.mp4'
       playing={playing}
       loop={true}
       muted={true}

@@ -28,23 +28,29 @@ export default function DrawerAppBar(props) {
   };
 
   const handleTabClick = (e) => {
-    console.log(e);
+    switch (e.target.tabIndex) {
+      case 0:
+        handleHomeButton();
+        break;
+      default:
+        break;
+    }
   };
 
-  const handleHomeButton = (e)=>{
+  const handleHomeButton = ()=>{
     document.querySelector('#my-model-logo').scrollIntoView({ behavior: 'smooth' });
   }
 
   const drawer = (
     <Box sx={{ textAlign: 'center'}}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <img src='./images/logo.svg' alt='' width={'180px'} height={'60px'} style={{ marginRight: '24px', verticalAlign: 'bottom' }}></img>
+        <img src='./images/logo2.svg' alt='' width={'180px'} height={'60px'} style={{ marginRight: '24px', verticalAlign: 'bottom' }}></img>
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton onClick={handleTabClick} sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -69,7 +75,7 @@ export default function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <img onClick={handleHomeButton} src='./images/logo.svg' alt='' width={'180px'} height={'60px'} style={{ marginRight: '24px', verticalAlign: 'bottom', cursor:'pointer' }}></img>
+          <img onClick={handleHomeButton} src='./images/logo2.svg' alt='' width={'180px'} height={'60px'} style={{ marginRight: '24px', verticalAlign: 'bottom', cursor:'pointer' }}></img>
           <Typography
             variant="inherit"
             component="div"
@@ -78,8 +84,8 @@ export default function DrawerAppBar(props) {
             {/*might be text here*/}
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: 'inherit', textTransform: 'none', fontWeight: 'bolder' }}>
+            {navItems.map((item,i) => (
+              <Button key={i} tabIndex={i} onClick={handleTabClick} sx={{ color: 'inherit', textTransform: 'none', fontWeight: 'bolder' }}>
                 {item}
               </Button>
             ))}

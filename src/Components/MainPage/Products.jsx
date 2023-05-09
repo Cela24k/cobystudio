@@ -34,7 +34,7 @@ function Products() {
                     })}
                 </div>
                 <div className="product-list">
-                    <ProductTabs tabEvent={handleTabs} />
+                    <ProductTabs tabEvent={handleTabs} sx={{height:'100%'}} />
                 </div>
             </div>
             <div className="avatars-header-wrapper b col-12 col-sm-6 col-lg-4">

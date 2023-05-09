@@ -40,7 +40,6 @@ function Avatars() {
     const [avatar, setAvatar] = useState(true);
 
     function handleChange(event) {
-        console.log(event);
         setAvatar((prev) => {
             return !prev;
         })
@@ -62,7 +61,7 @@ function Avatars() {
                             advertisement models, visual entertainers in the fashion and social media marketing
                             industry. Our avatars are design to perfectly represent your brand or product.
                         </span>
-                        <br />
+                        <br />  
                         <u className="avatar-changer" onClick={handleChange}>
                             Click to switch avatars
                         </u>
