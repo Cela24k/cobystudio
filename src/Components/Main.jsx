@@ -141,6 +141,8 @@ function VisualArt() {
           </div>
         </div>
         <div className="col-12 col-sm-8 col-lg-6 visual-reel-container">
+          <div className="feed-overlay">
+          </div>
           {feedVideo(currentVideo)}
         </div>
       </div>

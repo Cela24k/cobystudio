@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 
 const evaVideo = (
@@ -10,7 +10,7 @@ const evaVideo = (
         width={'100%'}
         height={'100%'}
         style={{
-            position:'relative',
+            position: 'relative',
             zIndex: 1,
             right: 0,
             bottom: 0,
@@ -18,23 +18,21 @@ const evaVideo = (
     />
 )
 
-const otherVideo = (
-    <ReactPlayer
-        url='./video/ava2.webm'
-        playing={true}
-        loop={true}
-        muted={true}
-        width={'100%'}
-        height={'100%'}
-        style={{
-            position: 'relative',
-            zIndex: 1,
-            right: 0,
-            bottom: 0,
-            "object-fit": "cover"
-        }}
-    />
-)
+function EvaVideo() {
+    return (
+        <div className="eva-video-container">
+            <video id='avatar' src="./video/eva.webm" autoPlay muted loop className="eva-video"></video>
+        </div>
+    )
+}
+
+function OtherVideo() {
+    return (
+        <div className="eva-video-container" >
+            <video id='avatar' src="./video/ava2.webm" autoPlay muted loop className="eva-video"></video>
+        </div>
+    )
+}
 
 function Avatars() {
 
@@ -47,7 +45,7 @@ function Avatars() {
     }
 
     return (
-        
+
         <div className="main b container-fluid" id="2">
             <div className="overlay over-eva">
             </div>
@@ -62,14 +60,14 @@ function Avatars() {
                             advertisement models, visual entertainers in the fashion and social media marketing
                             industry. Our avatars are design to perfectly represent your brand or product.
                         </span>
-                        <br />  
+                        <br />
                         <u className="avatar-changer" onClick={handleChange}>
                             Click to switch avatars
                         </u>
                     </div>
                 </div>
                 <div className="col-12 col-sm-8 col-lg-6 avatar-video-container">
-                    {avatar ? evaVideo : otherVideo}
+                    {avatar ? <EvaVideo/> : <OtherVideo/>}
                 </div>
             </div>
         </div>

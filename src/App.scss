@@ -132,7 +132,7 @@
             font-weight: bold;
           }
 
-          .threed-link{
+          .threed-link {
             color: white;
           }
 
@@ -208,6 +208,17 @@
   cursor: pointer;
 }
 
+.feed-overlay {
+  height: 100%;
+  width: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 20%, rgba(255,255,255,0) 70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .avatars-content {
   width: 100%;
   height: 100%;
@@ -217,6 +228,21 @@
 
 .avatar-video-container {
   height: 100%;
+}
+
+.eva-video-container {
+  position: relative;
+  z-index: 1;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.eva-video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 575px) {
@@ -320,6 +346,7 @@
 
 .visual-reel-container {
   height: 100%;
+  position:relative;
 }
 
 @media screen and (max-width: 575px) {
