@@ -19,7 +19,7 @@ function Contact() {
                         work showcasing our capabilities and expertise in creating a visually
                         stunning and highly interactive 3D designs. <br></br> Contact us today to learn
                         more about how we can help you create a 3D portfolio or website </div>
-                    <div className="portfolio-dialog-link">3D Portfolio</div>
+                    <div className="portfolio-dialog-link" ><a href="3dportfolio" className="threed-link"> 3D Portfolio </a></div>
                 </div>
                 <img className="studio-image" src="images/Stanza_Coby.jpg" alt="" />
             </div>

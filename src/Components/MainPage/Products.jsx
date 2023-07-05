@@ -46,8 +46,8 @@ function Products() {
                     This is why we offer professional product presentation services that
                     are designed to help you stand out in the competitive marketplace.
                     Whether you're looking to create visuals for a website, brochure, trade show,
-                    or even your own virtual gallery, we've got you covered.
-                    With our product presentation services, you can be sure that your that your
+                    or even your own virtual gallery, we've got you covered. 
+                    With our product presentation services, you can be sure that your
                     products will be presented in the best possible way, making a lasting
                     impression on your audience.
                 </span>
