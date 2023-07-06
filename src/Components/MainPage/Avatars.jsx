@@ -1,23 +1,6 @@
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 
-const evaVideo = (
-    <ReactPlayer
-        url='./video/eva.webm'
-        playing={true}
-        loop={true}
-        muted={true}
-        width={'100%'}
-        height={'100%'}
-        style={{
-            position: 'relative',
-            zIndex: 1,
-            right: 0,
-            bottom: 0,
-        }}
-    />
-)
-
 function EvaVideo() {
     return (
         <div className="eva-video-container">
@@ -29,7 +12,7 @@ function EvaVideo() {
 function OtherVideo() {
     return (
         <div className="eva-video-container" >
-            <video id='avatar' src="./video/ava2.webm" autoPlay muted loop className="eva-video"></video>
+            <video id='avatar' src="./video/ava2.webm" autoPlay muted loop className="eva-video" ></video>
         </div>
     )
 }
@@ -38,9 +21,29 @@ function Avatars() {
 
     const [avatar, setAvatar] = useState(true);
 
-    function handleChange(event) {
+    const [opacity, setOpacity] = useState(0.3);
 
-        if(avatar)
+    useEffect(() => {
+        let myInterval;
+        if (opacity > 0.3) {
+            myInterval = setInterval(() => {
+                setOpacity((prevOpacity) => {
+                    let newOpacity = prevOpacity - 0.01;
+                    if (newOpacity <= 0.3) {
+                        clearInterval(myInterval);
+                        return 0.3;
+                    }
+                    return newOpacity;
+                });
+            }, 10);
+        }
+        return () => {
+            clearInterval(myInterval);
+        };
+    }, [opacity]);
+
+    function handleChange(event) {
+        if (avatar)
             document.getElementById(2).classList.replace('b', 'b2');
         else
             document.getElementById(2).classList.replace('b2', 'b');
@@ -48,12 +51,14 @@ function Avatars() {
         setAvatar((prev) => {
             return !prev;
         })
+
+        setOpacity(1);
     }
 
     return (
 
         <div className="main b container-fluid" id="2">
-            <div className="overlay over-eva">
+            <div className="overlay over-eva" style={{ 'opacity': opacity, backgroundColor: 'black' }}>
             </div>
             <div className="row justify-content-center avatars-content">
                 <div className="avatars-header-wrapper a col-12 col-sm-6 col-lg-4">
@@ -73,7 +78,7 @@ function Avatars() {
                     </div>
                 </div>
                 <div className="col-12 col-sm-8 col-lg-6 avatar-video-container">
-                    {avatar ? <EvaVideo/> : <OtherVideo/>}
+                    {avatar ? <EvaVideo /> : <OtherVideo />}
                 </div>
             </div>
         </div>
