@@ -28,24 +28,6 @@ function Logo() {
   useEffect(() => {
     const mw = document.querySelector('#my-model-logo');
 
-    // const reverse_play = ()=>{
-    //   mw.timeScale = -1;
-    //   mw.play({repetitions:1})
-    //   setInterval(()=>{
-    //     mw.pause();
-    //     play();
-    //   },6000)
-    // }
-
-    // const play = ()=>{
-    //   mw.timeScale = 1;
-    //   mw.play({repetitions:1})
-    //   setInterval(()=>{
-    //     mw.pause();
-    //     reverse_play();
-    //   },6000)
-    // }
-
     const play = () => {
       mw.timeScale = 1;
       mw.play({ repetitions: 1 })
@@ -82,38 +64,59 @@ function Logo() {
 }
 
 const feedVideo = (val) => {
-  const videos = ['./video/Voglia_Di_Feed.webm', './video/Bomber_Turntable.mp4']
-  return (
-    val ?
-      <ReactPlayer
-        url={videos[0]}
-        playing={true}
-        loop={true}
-        muted={true}
-        height={'100%'}
-        width={'100%'}
-      />
-      :
-      <ReactPlayer
-        url={videos[1]}
-        playing={true}
-        loop={true}
-        muted={true}
-        height={'100%'}
-        width={'100%'}
-      />
-  )
+  const videos = ['./video/Voglia_Di_Feed.webm', './video/Bomber_Turntable.mp4', './video/Busto_infuocato.mp4'];
+
+  switch (val) {
+    case 0:
+      return (
+        <ReactPlayer
+          url={videos[0]}
+          playing={true}
+          loop={true}
+          muted={true}
+          height={'100%'}
+          width={'100%'}
+        />
+      )
+    case 1:
+      return (
+        <ReactPlayer
+          url={videos[1]}
+          playing={true}
+          loop={true}
+          muted={true}
+          height={'100%'}
+          width={'100%'}
+        />
+      )
+    case 2:
+      return (
+        <ReactPlayer
+          url={videos[2]}
+          playing={true}
+          loop={true}
+          muted={true}
+          height={'100%'}
+          width={'100%'}
+        />
+      )
+    default:
+      break;
+  }
 }
 
 
 // COMPONENTE PAGINA PRODOTTI 
 
 function VisualArt() {
-  const [currentVideo, setCurrentVideo] = useState(true)
+  const [currentVideo, setCurrentVideo] = useState(0)
 
   function handleChange(event) {
     setCurrentVideo((prev) => {
-      return !prev;
+      console.log(prev)
+      if (prev === 2)
+        return 0;
+      return ++prev;
     })
   }
 
