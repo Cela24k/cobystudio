@@ -161,7 +161,7 @@ function Reel() {
   useEffect(() => {
     window.addEventListener('scroll', (event) => {
 
-      // :^3 hard coded at 15% 
+      // :^3 hard coded at 15% of page height
       if (Math.floor(getScrollPercent()) >= 15)
         setPlaying(true);
     })

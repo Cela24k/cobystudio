@@ -52,6 +52,25 @@
       }
     }
 
+    &.b2{
+      background-color: #423b67;
+      background-image: url(../public/images/Portrait_BG.png);
+      color: white;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+      .overlay {
+        height: 100%;
+        width: 100%;
+        background-color: #00000050;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+      }
+    }
     &.c {
       background-color: #fdfde6;
       // position:relative;

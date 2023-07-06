@@ -39,6 +39,12 @@ function Avatars() {
     const [avatar, setAvatar] = useState(true);
 
     function handleChange(event) {
+
+        if(avatar)
+            document.getElementById(2).classList.replace('b', 'b2');
+        else
+            document.getElementById(2).classList.replace('b2', 'b');
+
         setAvatar((prev) => {
             return !prev;
         })
