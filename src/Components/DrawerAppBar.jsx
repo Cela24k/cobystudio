@@ -32,6 +32,15 @@ export default function DrawerAppBar(props) {
       case 0:
         handleHomeButton();
         break;
+      case 1:
+        handleServicesButton();
+        break;
+      case 2:
+        handleContactButton();
+        break;
+      case 3:
+        handleContactButton();
+        break;
       default:
         break;
     }
@@ -41,6 +50,14 @@ export default function DrawerAppBar(props) {
     document.querySelector('#my-model-logo').scrollIntoView({ behavior: 'smooth' });
   }
 
+  const handleContactButton = () => {
+    document.getElementById(5).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const handleServicesButton = () => {
+    document.getElementById(2).scrollIntoView({ behavior: 'smooth' });
+  }
+  
   const drawer = (
     <Box sx={{ textAlign: 'center'}}>
       <Typography variant="h6" sx={{ my: 2 }}>

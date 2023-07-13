@@ -5,6 +5,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Avatars from "./MainPage/Avatars"
 import Contact from "./MainPage/Contact"
 import Products from "./MainPage/Products";
+import Portfolio from "./MainPage/Portfolio";
 import { useState, useEffect } from 'react';
 
 function getScrollPercent() {
@@ -191,6 +192,7 @@ function Main() {
       <Avatars />
       <Products />
       <VisualArt />
+      <Portfolio/>
       <Contact />
     </div>
   );
