@@ -52,7 +52,7 @@
       }
     }
 
-    &.b2{
+    &.b2 {
       background-color: #423b67;
       background-image: url(../public/images/Portrait_BG.png);
       color: white;
@@ -71,6 +71,7 @@
 
       }
     }
+
     &.c {
       background-color: #fdfde6;
       // position:relative;
@@ -174,12 +175,46 @@
     }
 
     &.f {
-      height: 100vh;
+      height: 100%;
       background-color: #fdfde6;
     }
   }
-}
 
+  .footer-page {
+    height: 100%;
+    width: 100%;
+    background-color: #fdfde6;
+
+    .myfooter {
+      justify-content: space-evenly;
+      margin: 0 !important;
+    }
+
+    .logo-footer {
+      height: 100%;
+    }
+
+    .footer-text-container{
+      padding-top: 15px;
+      text-align: left;
+    }
+
+    .about-label{
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 0.8rem;
+    }
+
+    .mb-2{
+      margin-bottom: 0 !important;
+    }
+
+    .lighttext{
+      opacity: 0.5;
+    }
+
+  }
+
+}
 
 .logo-header-wrapper {
   height: 20%;
@@ -231,8 +266,8 @@
 .feed-overlay {
   height: 100%;
   width: 100%;
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 20%, rgba(255,255,255,0) 70%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 20%, rgba(255, 255, 255, 0) 70%);
   position: absolute;
   top: 0;
   left: 0;
@@ -366,7 +401,7 @@
 
 .visual-reel-container {
   height: 100%;
-  position:relative;
+  position: relative;
 }
 
 @media screen and (max-width: 575px) {

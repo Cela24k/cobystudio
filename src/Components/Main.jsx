@@ -6,6 +6,7 @@ import Avatars from "./MainPage/Avatars"
 import Contact from "./MainPage/Contact"
 import Products from "./MainPage/Products";
 import Portfolio from "./MainPage/Portfolio";
+import Footer from "./MainPage/Footer";
 import { useState, useEffect } from 'react';
 
 function getScrollPercent() {
@@ -194,6 +195,7 @@ function Main() {
       <VisualArt />
       <Portfolio/>
       <Contact />
+      <Footer/>
     </div>
   );
 }
