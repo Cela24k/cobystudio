@@ -186,7 +186,7 @@
     background-color: #fdfde6;
 
     .myfooter {
-      justify-content: space-evenly;
+      justify-content: space-between;
       margin: 0 !important;
     }
 
@@ -210,6 +210,14 @@
 
     .lighttext{
       opacity: 0.5;
+    }
+
+    .contact-card{
+      display: flex;
+    }
+    
+    .contact-icon{
+      margin-right: 10px;
     }
 
   }

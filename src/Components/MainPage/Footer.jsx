@@ -1,3 +1,7 @@
+import CallIcon from '@mui/icons-material/Call';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import EmailIcon from '@mui/icons-material/Email';
+
 function Footer() {
     return (
         <div className="footer-page">
@@ -9,7 +13,6 @@ function Footer() {
                         </a>
                         {/* <p class="text-muted">© 2022</p> */}
                     </div>
-                    <div className="col mb-3"></div>
                     <div className="col mb-5 footer-text-container">
                         <h5>ABOUT US</h5>
                         <ul className="nav flex-column">
@@ -31,12 +34,13 @@ function Footer() {
                     <div className="col mb-2 footer-text-container">
                         <h5>CONTATTACI</h5>
                         <ul className="nav flex-column">
-                            <li className="nav-item mb-2">
-                                <i class="bi bi-telephone"></i>
-                                <a href="#" className="nav-link p-0 text-muted about-label">Home</a>
+                            <li className="nav-item mb-2 contact-card ">
+                                <CallIcon className="contact-icon" />
+                                <a href="#" className="nav-link p-0 text-muted about-label">+39 0444 212360</a>
                             </li>
-                            <li className="nav-item mb-2">
-                                <a href="#" className="nav-link p-0 text-muted about-label">Features</a>
+                            <li className="nav-item mb-2 contact-card">
+                                <EmailIcon className='contact-icon'/>
+                                <a href="#" className="nav-link p-0 text-muted about-label">info@cobystudio.it</a>
                             </li>
                         </ul>
                     </div>
