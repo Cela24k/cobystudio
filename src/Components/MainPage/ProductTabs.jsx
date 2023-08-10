@@ -6,7 +6,7 @@ import { Avatar } from '@mui/material';
 
 export default function ProductTabs(props) {
   const [value, setValue] = React.useState(0);
-  const tabs = ['/Bomber.webp','/Cafe.webp','/Cuffie.webp'];
+  const tabs = ['models/gltf/cube_robot/scene.gltf','models/gltf/coffee/scene.gltf','models/gltf/headphones/scene.gltf'];
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

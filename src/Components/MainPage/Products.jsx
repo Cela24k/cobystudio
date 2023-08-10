@@ -1,19 +1,19 @@
 import ProductTabs from "./ProductTabs";
 import { useState } from "react";
 
-const prods = ['models/gltf/Bomber.glb', 'models/gltf/Cafe.glb', 'models/gltf/Cuffie.glb']
+const prods = ['models/gltf/cube_robot/scene.gltf', 'models/gltf/coffee/scene.gltf', 'models/gltf/headphones/scene.gltf']
 
 function Products() {
-    const [product, setProduct] = useState('models/gltf/Bomber.glb');
+    const [product, setProduct] = useState('models/gltf/cube_robot/scene.gltf');
 
     function handleTabs(tab) {
-        const newUrl = 'models/gltf' + tab.split('.')[0] + '.glb';
+        const newUrl = tab;
         console.log(newUrl);
         setProduct(newUrl);
     }
 
     return (<div className="main c container-fluid" id="3">
-        <div className="row justify-content-center product-row">
+        <div className="row justify-content-baseline product-row">
             <div className="product-scene-wrapper col-12 col-sm-8 col-lg-6">
                 <div className="product-viewer-container">
                     {prods.map((e, i) => {

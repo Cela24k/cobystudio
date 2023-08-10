@@ -72,9 +72,9 @@ function Avatars() {
                             industry. Our avatars are design to perfectly represent your brand or product.
                         </span>
                         <br />
-                        <u className="avatar-changer" onClick={handleChange}>
+                        {/* <u className="avatar-changer" onClick={handleChange}>
                             Click to switch avatars
-                        </u>
+                        </u> */}
                     </div>
                 </div>
                 <div className="col-12 col-sm-8 col-lg-6 avatar-video-container">
