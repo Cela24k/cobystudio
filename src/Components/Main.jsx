@@ -193,7 +193,7 @@ function Main() {
       <Avatars />
       <Products />
       <VisualArt />
-      <Portfolio/>
+      {/* <Portfolio/> */}
       <Contact />
       <Footer/>
     </div>

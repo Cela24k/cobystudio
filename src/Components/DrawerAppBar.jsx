@@ -46,12 +46,38 @@ export default function DrawerAppBar(props) {
     }
   };
 
+  // lo so è orribile avere ste due funzioni che fanno la stessa cosa ma con il parametro diverso, se funzionasse il tabIndex sul drawer non ce ne sarebbe bisogno
+  const handleDrawerTabClick = (e) => {
+    const tabname = e.target.innerHTML;
+    console.log(tabname);
+
+    switch (navItems.indexOf(tabname)) {
+      case 0:
+        handleHomeButton();
+        break;
+      case 1:
+        handleServicesButton();
+
+        break;
+      case 2:
+        handleContactButton();
+
+        break;
+      case 3:
+        handleContactButton();
+
+        break;
+      default:
+        console.log(tabname + "Non è un nome di tab valido");
+    }
+  }
+
   const handleHomeButton = ()=>{
     document.querySelector('#my-model-logo').scrollIntoView({ behavior: 'smooth' });
   }
 
   const handleContactButton = () => {
-    document.getElementById(5).scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(6).scrollIntoView({ behavior: 'smooth' });
   }
 
   const handleServicesButton = () => {
@@ -65,8 +91,8 @@ export default function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map((item,i) => (
+          <ListItem key={i} tabIndex={i} disablePadding onClick={handleDrawerTabClick}>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>

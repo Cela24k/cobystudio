@@ -426,7 +426,7 @@
 .contact-flex-container {
   display: flex;
   width: 100%;
-  height: 50%;
+  height: 50vh;
   justify-content: center;
   padding: 20px;
 
@@ -436,14 +436,16 @@
 
     .contact-row {
       column-gap: 10px;
+      margin-top: 30px;
+      margin-bottom: 30px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     .send-row {
       padding: 15px;
       display: flex;
-      justify-content: end;
+      justify-content: center;
 
       .send-button {
         color: #1d1d1d;
@@ -459,7 +461,7 @@
 
       .form-divider {
         width: 2.5vw;
-        height: 100%;
+        height: 50px;
       }
     }
   }
