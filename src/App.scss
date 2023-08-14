@@ -33,7 +33,7 @@
     }
 
     &.b {
-      background-color: #423b67;
+      background-color: #674c3b;
       background-image: url(../public/images/profilo_new.jpg);
       color: white;
       background-size: cover;
@@ -53,7 +53,7 @@
     }
 
     &.b2 {
-      background-color: #423b67;
+      background-color: #674b3b;
       background-image: url(../public/images/Portrait_BG.png);
       color: white;
       background-size: cover;
@@ -380,7 +380,7 @@
 @media screen and (max-width: 575px) {
   .product-row {
     flex-direction: column-reverse;
-    justify-content: baseline;
+    justify-content: space-between;
   }
 }
 

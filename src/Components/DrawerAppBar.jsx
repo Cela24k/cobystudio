@@ -50,27 +50,29 @@ export default function DrawerAppBar(props) {
   const handleDrawerTabClick = (e) => {
     const tabname = e.target.innerHTML;
     console.log(tabname);
-
-    switch (navItems.indexOf(tabname)) {
-      case 0:
-        handleHomeButton();
-        break;
-      case 1:
-        handleServicesButton();
-
-        break;
-      case 2:
-        handleContactButton();
-
-        break;
-      case 3:
-        handleContactButton();
-
-        break;
-      default:
-        console.log(tabname + "Non è un nome di tab valido");
-    }
-  }
+  
+    // Chiudi il drawer
+    handleDrawerToggle();
+  
+    setTimeout(() => {
+      switch (navItems.indexOf(tabname)) {
+        case 0:
+          handleHomeButton();
+          break;
+        case 1:
+          handleServicesButton();
+          break;
+        case 2:
+          handleContactButton();
+          break;
+        case 3:
+          handleContactButton();
+          break;
+        default:
+          console.log(tabname + "Non è un nome di tab valido");
+      }
+    }, 250); // Ritardo di 250 millisecondi (0.25 secondi) prima dello scorrimento, purtroppo sembra non esserci un modo per fare la subscribe all evento di scroll
+  };
 
   const handleHomeButton = ()=>{
     document.querySelector('#my-model-logo').scrollIntoView({ behavior: 'smooth' });

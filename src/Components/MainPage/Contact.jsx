@@ -21,22 +21,6 @@ function Contact() {
                         <span className="my-span">Scrivici per avere maggiori informazioni o anche solo per condividere un caffè</span>
                     </div>
 
-                    {/* <div className="contact-row">
-                        <TextField fullWidth id="standard-basic" label="Name" variant="standard" />
-                        <div className="form-divider"></div>
-                        <TextField fullWidth id="standard-basic" label="Surname" variant="standard" />
-                    </div>
-
-                    <div className="contact-row">
-                        <TextField fullWidth id="standard-basic" label="Email *" variant="standard" />
-                        <div className="form-divider"></div>
-                        <TextField fullWidth id="standard-basic" label="Phone" variant="standard" />
-                    </div>
-
-                    <div className="contact-row">
-                        <TextField multiline maxRows={4} fullWidth id="standard-basic" label="Message" variant="standard" />
-                    </div> */}
-
                     <div className="send-row">
                         <Button className="send-button" variant="outlined" onClick={handleSend}> <CreateIcon style={{marginRight:"5px"}}/> Contattaci</Button>
                     </div>

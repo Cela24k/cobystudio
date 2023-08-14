@@ -36,11 +36,11 @@ function Footer() {
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2 contact-card ">
                                 <CallIcon className="contact-icon" />
-                                <a href="#" className="nav-link p-0 text-muted about-label">+39 0444 212360</a>
+                                <a href="tel:+39 0444 212360" className="nav-link p-0 text-muted about-label">+39 0444 212360</a>
                             </li>
                             <li className="nav-item mb-2 contact-card">
                                 <EmailIcon className='contact-icon'/>
-                                <a href="#" className="nav-link p-0 text-muted about-label">info@cobystudio.it</a>
+                                <a href="mailto:info@cobystudio.it" className="nav-link p-0 text-muted about-label">info@cobystudio.it</a>
                             </li>
                         </ul>
                     </div>

@@ -12,9 +12,14 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   overflow: overlay;
   background-color: #fdfde6;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track transparent */
 }
 
 code {
