@@ -171,7 +171,7 @@ function Reel() {
 
   return (
     <ReactPlayer className="main f"
-      url='./video/REEL_new.mp4'
+      url='./video/REEL.mp4'
       playing={playing}
       loop={true}
       muted={true}

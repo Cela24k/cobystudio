@@ -1,7 +1,7 @@
 import ProductTabs from "./ProductTabs";
 import { useState } from "react";
 
-const prods = ['models/gltf/old_tractor/scene.gltf', 'models/gltf/coffee/scene.gltf', 'models/gltf/headphones/scene.gltf']
+const prods = ['models/gltf/Ship.glb', 'models/gltf/Cafe.glb', 'models/gltf/Cuffie.glb']
 
 function Products() {
     const [product, setProduct] = useState(prods[0]);

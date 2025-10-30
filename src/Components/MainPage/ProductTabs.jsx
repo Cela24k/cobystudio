@@ -6,7 +6,7 @@ import { Avatar } from '@mui/material';
 
 export default function ProductTabs(props) {
   const [value, setValue] = React.useState(0);
-  const tabs = ['models/gltf/old_tractor/scene.gltf','models/gltf/coffee/scene.gltf','models/gltf/headphones/scene.gltf'];
+  const tabs = ['models/gltf/Ship.glb','models/gltf/Cafe.glb','models/gltf/Cuffie.glb'];
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -24,9 +24,9 @@ export default function ProductTabs(props) {
         aria-label="scrollable force tabs"
         sx={{height:'100%',bgcolor:'transparent' }}
       >
-        <Tab icon={<Avatar alt="Bomber avatar" src="/Trattore.png"/>} />
-        <Tab icon={<Avatar alt="Cafe avatar" src="/CAFFE.png"/>} />
-        <Tab icon={<Avatar alt="Headphones avatar" src="/CUFFIE.png"/>} />
+        <Tab icon={<Avatar alt="Bomber avatar" src="/Ship.webp"/>} />
+        <Tab icon={<Avatar alt="Cafe avatar" src="/Cafe.webp"/>} />
+        <Tab icon={<Avatar alt="Headphones avatar" src="/Cuffie.webp"/>} />
       </Tabs>
     </Box>
   );
